@@ -56,5 +56,5 @@ lorem
 
 ### Navigation design
 
-lorem
+- Phones: Burger icon hidden menus.
 
