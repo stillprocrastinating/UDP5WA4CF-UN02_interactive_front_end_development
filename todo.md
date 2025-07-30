@@ -10,3 +10,12 @@ IDEA
 Use a small computer keyboard to type on a piano keyboard.
 - Open composing
 - Quiz format for theory practise
+- API/scraping potential - theory info
+
+IDEA II  
+Use number inputs or button clicks to roll dice.
+- d2, d4, d6, d8, d10, d12, d20
+- Total of rolled dice
+- Reset total
+- Ability to roll multiple die at once
+- API/scraping potential - gaming info
