@@ -10,7 +10,7 @@ IDEA
 Use a small computer keyboard to type on a piano keyboard.
 - Open composing
 - Quiz format for theory practise
-- API/scraping potential - theory info
+- API/scraping potential - theory info & sound production
 
 IDEA II  
 Use number inputs or button clicks to roll dice.
