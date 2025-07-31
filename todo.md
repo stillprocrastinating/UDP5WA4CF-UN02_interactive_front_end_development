@@ -1,6 +1,7 @@
 # To Do
 
-- Keep track of all bugs, however minor.
+- Keep track of all bugs, however minor.  
+  Use TDD (see bookmarked `Red-Green-Refactor` lesson).
 
 - Keep track of all UXD decisions & wireframes.
 
