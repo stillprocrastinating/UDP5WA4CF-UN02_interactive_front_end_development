@@ -1,2 +1,81 @@
 /* [WebAIM](https://webaim.org/resources/contrastchecker/) was used to check colour contrast between backgrounds and font colours. */
 /* Image/icon/font/content sources */
+
+/* roll-area */
+
+#roll-area{
+    border: 5px solid cyan;
+    padding: 5px;
+}
+
+.die{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+/* die-buttons-area */
+
+#die-buttons-area{
+    border: 5px solid magenta;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.die-btn{
+    border: 5px solid black;
+    padding: 5px;
+    flex-basis: 100px;
+}
+
+.d2{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+.d4{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+.d6{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+.d8{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+.d10{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+.d12{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+.d20{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+#d100-container{
+    position: relative;
+}
+
+.d100{
+    width: 60%;
+}
+
+#d10-180{
+    position: absolute;
+    left: 40%;
+    top: 65%;
+    border-radius: 15px 0px 0px 0px;
+}
