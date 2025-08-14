@@ -3,7 +3,7 @@
  */
 
 /** link to script.js */
-const { roll, savedRolls } = require("./script");
+const { roll, savedRolls, domLoad, rollDie } = require("./script");
 
 /** link to index.html */
 beforeAll(() => {
@@ -36,5 +36,12 @@ describe("roll object keys", () => {
 describe("savedRolls object keys", () => {
     test("save1 key = true", () => {
         expect("save1" in savedRolls).toBe(true);
+    });
+})
+
+describe("dieType", () => {
+    test("dieType = d2", () => {
+        document.getElementsByClassName("die-btn").getAttribute("data-type").innerText = "d2";
+        expect(dieType).toEqual("d2");
     });
 })
