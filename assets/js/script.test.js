@@ -41,7 +41,43 @@ describe("savedRolls object keys", () => {
 
 describe("dieType", () => {
     test("dieType = d2", () => {
-        document.getElementsByClassName("die-btn").getAttribute("data-type").innerText = "d2";
-        expect(dieType).toEqual("d2");
+        const elements = document.getElementsByClassName("die-btn");
+        const firstElement = elements[0];
+        expect(firstElement.getAttribute("data-type")).toBe("d2");
+    });
+    test("dieType = d4", () => {
+        const elements = document.getElementsByClassName("die-btn");
+        const secondElement = elements[1];
+        expect(secondElement.getAttribute("data-type")).toBe("d4");
+    });
+    test("dieType = d6", () => {
+        const elements = document.getElementsByClassName("die-btn");
+        const thirdElement = elements[2];
+        expect(thirdElement.getAttribute("data-type")).toBe("d6");
+    });
+    test("dieType = d8", () => {
+        const elements = document.getElementsByClassName("die-btn");
+        const fourthElement = elements[3];
+        expect(fourthElement.getAttribute("data-type")).toBe("d8");
+    });
+    test("dieType = d10", () => {
+        const elements = document.getElementsByClassName("die-btn");
+        const fifthElement = elements[4];
+        expect(fifthElement.getAttribute("data-type")).toBe("d10");
+    });
+    test("dieType = d12", () => {
+        const elements = document.getElementsByClassName("die-btn");
+        const sixthElement = elements[5];
+        expect(sixthElement.getAttribute("data-type")).toBe("d12");
+    });
+    test("dieType = d20", () => {
+        const elements = document.getElementsByClassName("die-btn");
+        const seventhElement = elements[6];
+        expect(seventhElement.getAttribute("data-type")).toBe("d20");
+    });
+    test("dieType = d100", () => {
+        const elements = document.getElementsByClassName("die-btn");
+        const eighthElement = elements[7];
+        expect(eighthElement.getAttribute("data-type")).toBe("d100");
     });
 })

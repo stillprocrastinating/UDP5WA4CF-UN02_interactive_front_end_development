@@ -20,6 +20,29 @@ let domLoad = document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("data-type") === "d2") {
                 let dieType = "d2";
                 rollDie(dieType);
+            } else if (this.getAttribute("data-type") === "d4") {
+                let dieType = "d4";
+                rollDie(dieType);
+            } else if (this.getAttribute("data-type") === "d6") {
+                let dieType = "d6";
+                rollDie(dieType);
+            } else if (this.getAttribute("data-type") === "d8") {
+                let dieType = "d8";
+                rollDie(dieType);
+            } else if (this.getAttribute("data-type") === "d10") {
+                let dieType = "d10";
+                rollDie(dieType);
+            } else if (this.getAttribute("data-type") === "d12") {
+                let dieType = "d12";
+                rollDie(dieType);
+            } else if (this.getAttribute("data-type") === "d20") {
+                let dieType = "d20";
+                rollDie(dieType);
+            } else if (this.getAttribute("data-type") === "d100") {
+                let dieType = "d100";
+                rollDie(dieType);
+            } else {
+                alert(`Please choose one of the available dice options.`);
             };
         });
     };
