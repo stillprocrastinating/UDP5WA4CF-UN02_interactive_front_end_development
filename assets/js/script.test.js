@@ -3,7 +3,7 @@
  */
 
 /** link to script.js */
-const { roll, savedRolls, domLoad, rollDie } = require("./script");
+const { roll, savedRolls, domLoad, reset, rollDie } = require("./script");
 
 /** link to index.html */
 beforeAll(() => {
