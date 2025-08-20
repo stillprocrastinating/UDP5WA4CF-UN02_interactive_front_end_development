@@ -30,36 +30,12 @@
     flex-basis: 100px;
 }
 
-.d2{
-    border: 5px solid black;
-    padding: 5px;
-}
-
-.d4{
-    border: 5px solid black;
-    padding: 5px;
-}
-
-.d6{
-    border: 5px solid black;
-    padding: 5px;
-}
-
-.d8{
-    border: 5px solid black;
-    padding: 5px;
-}
-
-.d10{
-    border: 5px solid black;
-    padding: 5px;
-}
-
-.d12{
-    border: 5px solid black;
-    padding: 5px;
-}
-
+.d2,
+.d4,
+.d6,
+.d8,
+.d10,
+.d12,
 .d20{
     border: 5px solid black;
     padding: 5px;
