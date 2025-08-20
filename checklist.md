@@ -71,7 +71,7 @@ Merit
 Merit
 1. Commit often, for each individual feature/fix, ensuring that commits are small, well-defined and have clear, descriptive messages.
 
-## Demonstrate and document the development process through a version control system such as [GitHub](https://github.com).
+## 5 Demonstrate and document the development process through a version control system such as [GitHub](https://github.com).
 
 1. Document the full development cycle, with clear evidence given through commit messages, the README.
 1. Write a README.md file for the interactive web application that explains its' purpose and the value that it provides to its users.
