@@ -63,6 +63,11 @@
 #roll-results-area{
     border: 5px solid magenta;
     padding: 5px;
+}
+
+#roll-results-container{
+    border: 5px solid lime;
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -76,8 +81,4 @@
     padding: 5px;
     text-align: center;
     flex: 0 250px; /* grow 0 / shrink 1 / basis 250px */
-}
-
-#previous-rolls{
-    flex: 500px;
 }
