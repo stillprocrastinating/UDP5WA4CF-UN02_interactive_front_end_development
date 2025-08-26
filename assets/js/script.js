@@ -6,10 +6,12 @@ let roll = {
     previousRolls: [],
 }
 
+
 /** object to contain saved rolls */
 let savedRolls = {
     save1: 0,
 }
+
 
 /** At DOM load, listen for die choice (click/keydown) */
 let domLoad = document.addEventListener("DOMContentLoaded", function () {
@@ -47,19 +49,32 @@ let domLoad = document.addEventListener("DOMContentLoaded", function () {
     };
 })
 
+
 /** starts a new roll set */
 function reset () {
     roll.cumulativeRoll = 0;
     roll.previousRolls = [];
 }
 
+
 /** rolls the type of die click/keydown */
 function rollDie (dieType) {
     roll.currentRoll = 0;
-    let rollRandom = roll.dieTypes[(Math.floor(Math.random() * dieType))];
+    let rollRandom = Math.floor(Math.random() * dieType) + 1;
+
     roll.previousRolls.push(rollRandom);
-    //roll.currentRoll = pull from dom;
+
+    showRolls();
 }
 
+
+/** displays the relevent rolls in the HTML */
+function showRolls () {
+	document.getElementById("current-roll").textContent = roll.currentRoll;
+	document.getElementById("cumulative-roll").textContent = roll.cumulativeRoll;
+	document.getElementById("previous-rolls").textContent = roll.previousRolls;
+}
+
+
 /** link to script.text.js */
-module.exports = { roll, savedRolls, domLoad, reset, rollDie };
+module.exports = { roll, savedRolls, domLoad, reset, rollDie, showRolls };

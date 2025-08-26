@@ -3,7 +3,7 @@
  */
 
 /** link to script.js */
-const { roll, savedRolls, domLoad, reset, rollDie } = require("./script");
+const { roll, savedRolls, domLoad, reset, rollDie, showRolls } = require("./script");
 
 /** link to index.html */
 beforeAll(() => {
@@ -30,6 +30,10 @@ describe("roll object keys", () => {
     });
     test("dieTypes ids = true", () => {
         expect(roll.dieTypes).toEqual(["d2", "d4", "d6", "d8", "d10", "d12", "d20", "d100"]);
+    });
+    test("cumulativeRoll functions", () => {
+        roll.previousRolls = [1, 2, 3, 4];
+        expect(roll.cumulativeRoll).toBe(10);
     });
 })
 

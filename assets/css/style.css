@@ -74,9 +74,9 @@
     gap: 5px;
 }
 
-#current-roll,
-#cumulative-roll,
-#previous-rolls{
+#current-roll-container,
+#cumulative-roll-container,
+#previous-rolls-container{
     border: 5px solid black;
     padding: 5px;
     text-align: center;
