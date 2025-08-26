@@ -59,10 +59,11 @@ function reset () {
 
 /** rolls the type of die click/keydown */
 function rollDie (dieType) {
-    roll.currentRoll = 0;
     let rollRandom = Math.floor(Math.random() * dieType) + 1;
 
+    roll.currentRoll = rollRandom;
     roll.previousRolls.push(rollRandom);
+    //calculateCumulative();
 
     showRolls();
 }
