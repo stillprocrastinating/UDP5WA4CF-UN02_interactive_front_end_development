@@ -54,6 +54,10 @@ let domLoad = document.addEventListener("DOMContentLoaded", function () {
 function reset () {
     roll.cumulativeRoll = 0;
     roll.previousRolls = [];
+
+    document.getElementById("current-roll").textContent = `-`;
+	document.getElementById("cumulative-roll").textContent = `-`;
+	document.getElementById("previous-rolls").textContent = `-`;
 }
 
 
@@ -63,7 +67,7 @@ function rollDie (dieType) {
 
     roll.currentRoll = `${rollRandom} (d${dieType})`;
     roll.cumulativeRoll = roll.cumulativeRoll + rollRandom;
-    roll.previousRolls.push(`${rollRandom}(d${dieType})`);
+    roll.previousRolls.push(` ${rollRandom}(d${dieType})`);
 
     showRolls();
 }

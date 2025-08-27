@@ -86,3 +86,22 @@
 #previous-rolls{
     word-wrap: break-word;
 }
+
+/* action-buttons-area */
+
+#action-buttons-area{
+    border: 5px solid magenta;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+#save-button,
+#reset-button{
+    border: 5px solid black;
+    padding: 5px;
+    text-align: center;
+    flex: 0 150px; /* grow 0 / shrink 1 / basis 150px */
+}
