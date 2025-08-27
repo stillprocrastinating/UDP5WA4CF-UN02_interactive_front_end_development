@@ -61,9 +61,9 @@ function reset () {
 function rollDie (dieType) {
     let rollRandom = Math.floor(Math.random() * dieType) + 1;
 
-    roll.currentRoll = rollRandom;
+    roll.currentRoll = `${rollRandom} (d${dieType})`;
     roll.cumulativeRoll = roll.cumulativeRoll + rollRandom;
-    roll.previousRolls.push(rollRandom);
+    roll.previousRolls.push(`${rollRandom}(d${dieType})`);
 
     showRolls();
 }
