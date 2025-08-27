@@ -62,8 +62,8 @@ function rollDie (dieType) {
     let rollRandom = Math.floor(Math.random() * dieType) + 1;
 
     roll.currentRoll = rollRandom;
+    roll.cumulativeRoll = roll.cumulativeRoll + rollRandom;
     roll.previousRolls.push(rollRandom);
-    //calculateCumulative();
 
     showRolls();
 }
