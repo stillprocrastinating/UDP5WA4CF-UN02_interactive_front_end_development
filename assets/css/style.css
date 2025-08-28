@@ -1,6 +1,17 @@
 /* [WebAIM](https://webaim.org/resources/contrastchecker/) was used to check colour contrast between backgrounds and font colours. */
 /* Image/icon/font/content sources */
 
+
+
+body{
+    padding: 0px 10%;
+}
+
+
+
+/* index.html */
+
+
 /* roll-area */
 
 #roll-area{
@@ -12,6 +23,7 @@
     border: 5px solid black;
     padding: 5px;
 }
+
 
 /* die-buttons-area */
 
@@ -58,6 +70,7 @@
     border-radius: 15px 0px 0px 0px;
 }
 
+
 /* roll-results-area */
 
 #roll-results-area{
@@ -87,6 +100,7 @@
     word-wrap: break-word;
 }
 
+
 /* action-buttons-area */
 
 #action-buttons-area{
@@ -105,3 +119,46 @@
     text-align: center;
     flex: 0 150px; /* grow 0 / shrink 1 / basis 150px */
 }
+
+
+
+/* saves.html */
+
+
+/* #saves-area */
+
+table{
+    border: 5px solid cyan;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+tr{
+    border: 5px solid magenta;
+    padding: 10px 10px 25px;
+}
+
+th{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+td{
+    border: 5px solid lime;
+    padding: 5px;
+}
+
+#table-th-number{
+    width: 10px;
+}
+
+#table-th-name{
+    width: 100px;
+}
+
+#table-th-edit-button{
+    width: 10px;
+}
+
+.rename-button{}
