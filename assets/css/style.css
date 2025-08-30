@@ -171,8 +171,18 @@ td{
     width: 10px;
 }
 
+#table-th-delete-button{
+    width: 10px;
+}
+
 /*.rename-button{}*/
 
 .rename-button:hover{
+    stroke: red;
+}
+
+/*.delete-button{}*/
+
+.delete-button:hover{
     stroke: red;
 }
