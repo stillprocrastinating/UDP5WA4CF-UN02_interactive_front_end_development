@@ -9,7 +9,7 @@ let roll = {
 
 /** object to contain saved rolls */
 let savedRolls = {
-    save1: 0,
+    save1: [],
 }
 
 
@@ -73,10 +73,6 @@ function rollDie (dieType) {
 }
 
 
-/** saves the set of rolls to a new save slot */
-function save () {}
-
-
 /** displays the relevent rolls in the HTML */
 function showRolls () {
 	document.getElementById("current-roll").textContent = roll.currentRoll;
@@ -85,5 +81,27 @@ function showRolls () {
 }
 
 
-/** link to script.text.js */
-module.exports = { roll, savedRolls, domLoad, reset, rollDie, showRolls };
+// ||||| ||||| |   | ||||| |||||
+// |     |   | || || |     |
+// ||||| |||||  | |  ||||  |||||
+//     | |   |  |||  |         |
+// ||||| |   |   |   ||||| |||||
+
+
+/** saves the set of rolls to a new save slot */
+function save () {
+    savedRolls.save1.push(roll.previousRolls);
+    
+	document.getElementById("save-roll-1").textContent = savedRolls.save1;
+}
+
+
+// ||||| ||||| ||||| |||||
+//   |   |     |       |
+//   |   ||||  |||||   |
+//   |   |         |   |
+//   |   ||||| |||||   |
+
+
+/** link to script.test.js */
+module.exports = { roll, savedRolls, domLoad, rollDie };
