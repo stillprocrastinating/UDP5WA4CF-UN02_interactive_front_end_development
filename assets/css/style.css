@@ -10,7 +10,7 @@ body{
 
 
 /* index.html */
-
+/* ~~~~~~~~~~ */
 
 /* roll-area */
 
@@ -120,10 +120,20 @@ body{
     flex: 0 150px; /* grow 0 / shrink 1 / basis 150px */
 }
 
+#save-button:hover,
+#reset-button:hover{
+    background-color: red;
+}
+
+#save-button:active,
+#reset-button:active{
+    background-color: green;
+}
+
 
 
 /* saves.html */
-
+/* ~~~~~~~~~~ */
 
 /* #saves-area */
 
@@ -161,4 +171,8 @@ td{
     width: 10px;
 }
 
-.rename-button{}
+/*.rename-button{}*/
+
+.rename-button:hover{
+    stroke: red;
+}

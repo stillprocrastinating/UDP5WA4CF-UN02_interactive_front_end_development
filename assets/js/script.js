@@ -73,6 +73,10 @@ function rollDie (dieType) {
 }
 
 
+/** saves the set of rolls to a new save slot */
+function save () {}
+
+
 /** displays the relevent rolls in the HTML */
 function showRolls () {
 	document.getElementById("current-roll").textContent = roll.currentRoll;
