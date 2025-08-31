@@ -6,3 +6,4 @@
 | 4 | 2025-08-26 | `#previous-rolls` text will eventually break out of the device width | 2025-08-26 | `#previous-rolls{word-wrap: break-word;}` | [main 825087d] #previous-rolls{word-wrap: break-word;} ||
 | 5 | 2025-08-30 | `savedRolls.save1` isn't accessible across pages in `saves.html` `#save-roll-1` | 2025-08-31 | `#saves-area` moved into `index.html` (`saves.html` deleted) | [main 51127d2] save(){} - functional ||
 | 6 | 2025-08-31 | `.show-instructions-button` & `.hide-instructions-button` `onclick` functions don't execute | 2025-08-31 | Changed to `#show-instructions-button` & `#show-instructions-button` | [main e13e4c4] hideInstructions(){} - functional | Well, that was embarrassing. |
+| 7 | 2025-08-31 | Attempt upgrade of `save()` to automatically add new save data to `#save-table` |
