@@ -20,6 +20,14 @@ let savedRolls = {
 
 function showInstructions () {
     document.getElementById("instructions").style.display = "block";
+    document.getElementById("hide-instructions-button").style.display = "block";
+    document.getElementById("show-instructions-button").style.display = "none";
+}
+
+function hideInstructions () {
+    document.getElementById("show-instructions-button").style.display = "block";
+    document.getElementById("hide-instructions-button").style.display = "none";
+    document.getElementById("instructions").style.display = "none";
 }
 
 

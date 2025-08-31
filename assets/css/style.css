@@ -19,9 +19,16 @@ body{
     padding: 5px;
 }
 
-.instructions-button{
+#show-instructions-button{
     border: 5px solid black;
     padding: 5px;
+    display: block;
+}
+
+#hide-instructions-button{
+    border: 5px solid black;
+    padding: 5px;
+    display: none;
 }
 
 #instructions{
