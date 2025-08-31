@@ -13,6 +13,13 @@ let savedRolls = {
 }
 
 
+/* ||||| ||||| |     |
+/* |   | |   | |     |
+/* ||||| |   | |     |
+/* | |   |   | |     |
+/* |  || ||||| ||||| ||||| */
+
+
 /** At DOM load, listen for die choice (click/keydown) */
 let domLoad = document.addEventListener("DOMContentLoaded", function () {
     let dieButtons = document.getElementsByClassName("die-btn");
@@ -81,11 +88,11 @@ function showRolls () {
 }
 
 
-// ||||| ||||| |   | ||||| |||||
-// |     |   | || || |     |
-// ||||| |||||  | |  ||||  |||||
-//     | |   |  |||  |         |
-// ||||| |   |   |   ||||| |||||
+/* ||||| ||||| |   | ||||| |||||
+/* |     |   | || || |     |
+/* ||||| |||||  | |  ||||  |||||
+/*     | |   |  |||  |         |
+/* ||||| |   |   |   ||||| ||||| */
 
 
 /** saves the set of rolls to a new save slot */
@@ -96,11 +103,11 @@ function save () {
 }
 
 
-// ||||| ||||| ||||| |||||
-//   |   |     |       |
-//   |   ||||  |||||   |
-//   |   |         |   |
-//   |   ||||| |||||   |
+/* ||||| ||||| ||||| |||||
+/*   |   |     |       |
+/*   |   ||||  |||||   |
+/*   |   |         |   |
+/*   |   ||||| |||||   | */
 
 
 /** link to script.test.js */
