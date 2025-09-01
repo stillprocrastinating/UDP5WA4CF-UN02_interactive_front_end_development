@@ -121,7 +121,7 @@ function showRolls () {
 //	document.getElementById("save-roll-1").textContent = savedRolls.save1;
 //}
 function save () {
-    saveIteration++;
+    ++saveIteration;
     savedRolls[`save${saveIteration}`].push(roll.previousRolls);
     
     let existingTable = document.getElementById("save-Table");
@@ -146,9 +146,14 @@ function save () {
         </div>
     </td>
 </tr>`;
-    existingTable.innerHTML = `${existingTable}${newRow}`;
+    existingTable.insertAdjacentHTML(beforeend, newRow);
 	document.getElementById(`save-roll-${saveIteration}`).textContent = savedRolls[`save${saveIteration}`];
 }
+//Uncaught TypeError: Cannot read properties of null (reading 'insertAdjacentHTML')
+    //at save (script.js:149:19)
+    //at HTMLDivElement.onclick (index.html:124:106)
+// Use [this website](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML) > Exceptions > TypeError ... to figure out fix
+
 // If this doesn't work, just limit to 10 save slots.
 
 
