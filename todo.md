@@ -5,7 +5,7 @@
 
 - Keep track of all UXD decisions & wireframes.
 
-- Burger navbar menu <992px (because I didn't end up using it last time).
+~~- Burger navbar menu <992px (because I didn't end up using it last time).~~
 
 ~~IDEA~~
 ~~Use a small computer keyboard to type on a piano keyboard.~~
