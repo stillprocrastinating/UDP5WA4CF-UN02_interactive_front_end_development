@@ -3,7 +3,7 @@
 
 
 
-body{
+body {
     padding: 0px 10%;
 }
 
@@ -14,27 +14,44 @@ body{
 /* | |  ||     |   |   | |   |   | |       |   | |   | |  ||     |
 /* | |   | ||||    |   |  ||  |||   ||||   |   |  |||  |   | ||||  */
 
-#instructions-area{
+#instructions-area {
     border: 5px solid cyan;
     padding: 5px;
 }
 
-#show-instructions-button{
+#show-instructions-button {
     border: 5px solid black;
     padding: 5px;
     display: block;
 }
 
-#hide-instructions-button{
+#hide-instructions-button {
     border: 5px solid black;
     padding: 5px;
     display: none;
 }
 
-#instructions{
+#instructions {
     border: 5px solid magenta;
     padding: 5px;
     display: none;
+}
+
+
+/* |   |  |||   ||||  |||| ||||  | ||||  |||||
+/* ||  | |   | |     |     |   | | |   |   |
+/* | | | |   |  |||  |     ||||  | ||||    |
+/* |  || |   |     | |     | |   | |       |
+/* |   |  |||  ||||   |||| |  || | |       | */
+
+#noscript {
+    border: 5px solid cyan;
+    padding: 5px;
+}
+
+#noscript p {
+    border: 5px solid magenta;
+    padding: 5px;
 }
 
 
@@ -44,12 +61,12 @@ body{
 /* | |   |   | |     |
 /* |  ||  |||  ||||| ||||| */
 
-#roll-area{
+#roll-area {
     border: 5px solid cyan;
     padding: 5px;
 }
 
-.die{
+.die {
     border: 5px solid black;
     padding: 5px;
 }
@@ -57,7 +74,7 @@ body{
 
 /* die-buttons-area */
 
-#die-buttons-area{
+#die-buttons-area {
     border: 5px solid magenta;
     padding: 5px;
     display: flex;
@@ -66,7 +83,7 @@ body{
     gap: 5px;
 }
 
-.die-btn{
+.die-btn {
     border: 5px solid black;
     padding: 5px;
     flex-basis: 100px;
@@ -78,22 +95,22 @@ body{
 .d8,
 .d10,
 .d12,
-.d20{
+.d20 {
     border: 5px solid black;
     padding: 5px;
 }
 
-#d100-contents{
+#d100-contents {
     background-color: black;
     height: 80px;
     position: relative;
 }
 
-.d100{
+.d100 {
     width: 60%;
 }
 
-#d10-180{
+#d10-180 {
     position: absolute;
     left: 40%;
     top: 35%;
@@ -103,12 +120,12 @@ body{
 
 /* roll-results-area */
 
-#roll-results-area{
+#roll-results-area {
     border: 5px solid magenta;
     padding: 5px;
 }
 
-#roll-results-container{
+#roll-results-container {
     border: 5px solid lime;
     padding: 5px;
     display: flex;
@@ -119,21 +136,21 @@ body{
 
 #current-roll-container,
 #cumulative-roll-container,
-#previous-rolls-container{
+#previous-rolls-container {
     border: 5px solid black;
     padding: 5px;
     text-align: center;
     flex: 0 250px; /* grow 0 / shrink 1 / basis 250px */
 }
 
-#previous-rolls{
+#previous-rolls {
     word-wrap: break-word;
 }
 
 
 /* action-buttons-area */
 
-#action-buttons-area{
+#action-buttons-area {
     border: 5px solid magenta;
     padding: 5px;
     display: flex;
@@ -143,7 +160,7 @@ body{
 }
 
 #save-button,
-#reset-button{
+#reset-button {
     border: 5px solid black;
     padding: 5px;
     text-align: center;
@@ -151,12 +168,12 @@ body{
 }
 
 #save-button:hover,
-#reset-button:hover{
+#reset-button:hover {
     background-color: red;
 }
 
 #save-button:active,
-#reset-button:active{
+#reset-button:active {
     background-color: green;
 }
 
@@ -167,52 +184,52 @@ body{
 /*     | |   |  | |  |         |
 /* ||||  |   |   |   ||||| ||||  */
 
-table{
+table {
     border: 5px solid cyan;
     padding: 5px;
     width: 100%;
     text-align: center;
 }
 
-tr{
+tr {
     border: 5px solid magenta;
     padding: 10px 10px 25px;
 }
 
-th{
+th {
     border: 5px solid black;
     padding: 5px;
 }
 
-td{
+td {
     border: 5px solid lime;
     padding: 5px;
 }
 
-#table-th-number{
+#table-th-number {
     width: 10px;
 }
 
-#table-th-name{
+#table-th-name {
     width: 100px;
 }
 
-#table-th-edit-button{
+#table-th-edit-button {
     width: 10px;
 }
 
-#table-th-delete-button{
+#table-th-delete-button {
     width: 10px;
 }
 
-/*.rename-button{}*/
+/*.rename-button {}*/
 
-.rename-button:hover{
+.rename-button:hover {
     stroke: red;
 }
 
-/*.delete-button{}*/
+/*.delete-button {}*/
 
-.delete-button:hover{
+.delete-button:hover {
     stroke: red;
 }
