@@ -120,39 +120,56 @@ function showRolls () {
     
 //	document.getElementById("save-roll-1").textContent = savedRolls.save1;
 //}
+//function save () {
+//    ++saveIteration;
+//    savedRolls[`save${saveIteration}`].push(roll.previousRolls);
+    
+//    let existingTable = document.getElementById("save-table");
+//    let newRow = `<tr>
+//    <td id="save-number-${saveIteration}">
+//        ${saveIteration}
+//    </td>
+//    <td id="save-name-${saveIteration}">
+//        Save-${saveIteration}
+//    </td>
+//    <td>
+        //<div id="rename-${saveIteration}" title="rename save" aria-label="Rename the save">
+        //    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-pen-icon lucide-square-pen rename-button" alt="a pen overlapping a square, commonly understood as an edit symbol"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></svg> <!-- src="assets/images/saves-area/square-pen.svg" -->
+        //</div>
+//    </td>
+//    <td id="save-roll-${saveIteration}">
+//        -
+//    </td>
+//    <td>
+        //<div id="delete-${saveIteration}" title="delete save" aria-label="Delete the save">
+        //    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2 delete-button"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> <!-- src="assets/images/saves-area/square-pen.svg" -->
+        //</div>
+//    </td>
+//</tr>`;
+//    existingTable.insertAdjacentHTML(beforeend, newRow);
+//	document.getElementById(`save-roll-${saveIteration}`).textContent = savedRolls[`save${saveIteration}`];
+//}
+
 function save () {
     ++saveIteration;
     savedRolls[`save${saveIteration}`].push(roll.previousRolls);
+
+    let renameButton = `<div id="rename-${saveIteration}" title="rename save" aria-label="Rename the save"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-pen-icon lucide-square-pen rename-button" alt="a pen overlapping a square, commonly understood as an edit symbol"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></svg> <!-- src="assets/images/saves-area/square-pen.svg" --></div>`;
+    let deleteButton = `<div id="delete-${saveIteration}" title="delete save" aria-label="Delete the save"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2 delete-button"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> <!-- src="assets/images/saves-area/trash-2.svg" --></div>`;
     
-    let existingTable = document.getElementById("save-Table");
-    let newRow = `<tr>
-    <td id="save-number-${saveIteration}">
-        ${saveIteration}
-    </td>
-    <td id="save-name-${saveIteration}">
-        Save-${saveIteration}
-    </td>
-    <td>
-        <div id="rename-${saveIteration}" title="rename save" aria-label="Rename the save">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-pen-icon lucide-square-pen rename-button" alt="a pen overlapping a square, commonly understood as an edit symbol"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></svg> <!-- src="assets/images/saves-area/square-pen.svg" -->
-        </div>
-    </td>
-    <td id="save-roll-${saveIteration}">
-        -
-    </td>
-    <td>
-        <div id="delete-${saveIteration}" title="delete save" aria-label="Delete the save">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2 delete-button"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> <!-- src="assets/images/saves-area/square-pen.svg" -->
-        </div>
-    </td>
-</tr>`;
-    existingTable.insertAdjacentHTML(beforeend, newRow);
-	document.getElementById(`save-roll-${saveIteration}`).textContent = savedRolls[`save${saveIteration}`];
+    let existingTable = document.getElementById("save-table");
+    let newRow = existingTable.insertRow(-1);
+    let newRowNumber = newRow.insertCell(0);
+    newRowNumber.innerHTML = saveIteration;
+    let newRowName = newRow.insertCell(1);
+    newRowName.innerHTML = `save${saveIteration}`;
+    let newRowRename = newRow.insertCell(2);
+    newRowRename.innerHTML = renameButton;
+    let newRowRolls = newRow.insertCell(3);
+    newRowRolls.innerHTML = savedRolls[`save${saveIteration}`];
+    let newRowDelete = newRow.insertCell(4);
+    newRowDelete.innerHTML = deleteButton;
 }
-//Uncaught TypeError: Cannot read properties of null (reading 'insertAdjacentHTML')
-    //at save (script.js:149:19)
-    //at HTMLDivElement.onclick (index.html:124:106)
-// Use [this website](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML) > Exceptions > TypeError ... to figure out fix
 
 // If this doesn't work, just limit to 10 save slots.
 
