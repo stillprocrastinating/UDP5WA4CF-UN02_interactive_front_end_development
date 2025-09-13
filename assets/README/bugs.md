@@ -8,4 +8,4 @@
 | 6 | 2025-08-31 | `.show-instructions-button` & `.hide-instructions-button` `onclick` functions don't execute | 2025-08-31 | Changed to `#show-instructions-button` & `#show-instructions-button` | [main e13e4c4] hideInstructions(){} - functional | Well, that was embarrassing |
 | 7 | 2025-08-31 | Attempt upgrade of `save()` to automatically add new save data to `#save-table` | 2025-09-11 | Utililising `insertRow()` & `insertCell()` with `innerHTML` | [main b45dfce] upgraded save(){table.insertRow} - functional | Wow, what a bug |
 | 8 | 2025-09-11 | `save()` upgrade relies on preset `savedRolls{}` keys; attempt auto population | 2025-09-11 | Utilising `Object.defineProperty()` | [main 102ee88] upgraded save(){Object.defineProperty} - functional ||
-| 9 | 2025-09-11 | `deleteSave()` `eventListener` / `parentNode` broken | 2025-09-13 | Add `this` to `onclick` |
+| 9 | 2025-09-11 | `deleteSave()` `eventListener` / `parentNode` broken | 2025-09-13 | Add `this` to `onclick` | [main ef2735e] deleteSave(){} - functional ||
