@@ -129,7 +129,7 @@ function save () {
     let newRowRename = newRow.insertCell(2);
     newRowRename.innerHTML = renameButton;
     let newRowRolls = newRow.insertCell(3);
-    newRowRolls.innerHTML = savedRolls[`save${saveIteration}`];
+    newRowRolls.innerHTML = savedRolls[`save${saveIteration}`] + ".  Total: " + roll.cumulativeRoll;
     let newRowDelete = newRow.insertCell(4);
     newRowDelete.innerHTML = deleteButton;
 }
