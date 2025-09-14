@@ -22,141 +22,153 @@
      <!--<script src="assets/js/discord.js" defer></script>-->
 </head>
 <body>
-    <section id="instructions-area" aria-label="Go here for instructions">
-        <div id="show-instructions-button" class="header" onclick="showInstructions()">
-            Show instructions
+    <noscript>
+        <div id="noscript">
+            <p>
+                This site will not function without JavaScript.
+            </p>
+            <p>
+                Please enable JavaScript.
+            </p>
         </div>
-        <div id="hide-instructions-button" class="header" onclick="hideInstructions()">
-            Hide instructions
-        </div>
-        <div id="instructions" class="header-body">
-            <ol>
-                <li>
-                    Click the type of die desired.
-                    <ul>
-                        <li>
-                            The question-marks die allows you to input a custom die type to roll.
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    The result of the roll will show in the area called "current roll".
-                    <ul>
-                        <li>
-                            The roll result will also be added to the running total of all rolls made in the area called "cumulative roll".
-                        </li>
-                        <li>
-                            The roll result will also be listed in the area called "previous rolls".
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    The "save" button can be clicked to save the list of "previous rolls".
-                    <ul>
-                        <li>
-                            The edit button can be used to edit the name of the save.
-                        </li>
-                        <li>
-                            The delete button can be used to delete the save.
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    The "reset" button can be clicked to clear the roll results.
-                </li>
-            </ol>
-        </div>
-    </section>
-    <section id="roll-area" aria-label="Go here to roll dice">
-        <div id="die-buttons-area" aria-label="Go here again to roll dice">
-            <div class="die die-btn d2" data-type="d2" title="d2 / coin" aria-label="Roll a d2 / coin">
-                <img src="assets/images/die-buttons-area/d2.svg" alt="a 2-sided die">
+    </noscript>
+    <main id="main">
+        <section id="instructions-area">
+            <div id="show-instructions-button" class="header" onclick="showInstructions()">
+                Show instructions
             </div>
-            <div class="die die-btn d4" data-type="d4" title="d4" aria-label="Roll a d4">
-                <img src="assets/images/die-buttons-area/d4.svg" alt="a 4-sided die">
+            <div id="hide-instructions-button" class="header" onclick="hideInstructions()">
+                Hide instructions
             </div>
-            <div class="die die-btn d6" data-type="d6" title="d6 / regular dice" aria-label="Roll a d6 / regular dice">
-                <img src="assets/images/die-buttons-area/d6.svg" alt="a 6-sided die">
+            <div id="instructions" class="header-body">
+                <ol>
+                    <li>
+                        Click the type of die desired.
+                        <ul>
+                            <li>
+                                The question-marks die allows you to input a custom die type to roll.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        The result of the roll will show in the area called "current roll".
+                        <ul>
+                            <li>
+                                The roll result will also be added to the running total of all rolls made in the area called "cumulative roll".
+                            </li>
+                            <li>
+                                The roll result will also be listed in the area called "previous rolls".
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        The "save" button can be clicked to save the list of "previous rolls".
+                        <ul>
+                            <li>
+                                The edit button can be used to edit the name of the save.
+                            </li>
+                            <li>
+                                The delete button can be used to delete the save.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        The "reset" button can be clicked to clear the roll results.
+                    </li>
+                </ol>
             </div>
-            <div class="die die-btn d8" data-type="d8" title="d8" aria-label="Roll a d8">
-                <img src="assets/images/die-buttons-area/d8.svg" alt="a 8-sided die">
-            </div>
-            <div class="die die-btn d10" data-type="d10" title="d10" aria-label="Roll a d10">
-                <img src="assets/images/die-buttons-area/d10.svg" alt="a 10-sided die">
-            </div>
-            <div class="die die-btn d12" data-type="d12" title="d12" aria-label="Roll a d12">
-                <img src="assets/images/die-buttons-area/d12.svg" alt="a 12-sided die">
-            </div>
-            <div class="die die-btn d20" data-type="d20" title="d20" aria-label="Roll a d20">
-                <img src="assets/images/die-buttons-area/d20.svg" alt="a 20-sided die">
-            </div>
-            <div id="d100-container" class="die die-btn" data-type="d100" title="d100" aria-label="Roll a d100">
-                <div id="d100-contents">
-                    <img src="assets/images/die-buttons-area/d10.svg" alt="a 10-sided die" class="d100">
-                    <img src="assets/images/die-buttons-area/d10(180).svg" alt="another 10-sided die, together making a 100-sided set" class="d100" id="d10-180">
+        </section>
+        <section id="roll-area" aria-label="Go here to roll dice">
+            <div id="die-buttons-area" aria-label="Go here again to roll dice">
+                <div class="die die-btn d2" data-type="d2" title="d2 / coin" aria-label="Roll a d2 / coin">
+                    <img src="assets/images/die-buttons-area/d2.svg" alt="a 2-sided die">
                 </div>
-            </div>
-            <div class="die-other die-btn d-other" data-type="d-other" title="Input a number to roll using" aria-label="Roll a different die">
-                <img src="assets/images/die-buttons-area/d-other.svg" alt="a 6-sided die with question marks instead of numbered sides">
-            </div>
-        </div>
-        <div id="roll-results-area" aria-label="Go here to know roll results">
-            <div id="roll-results-container">
-                <div id="current-roll-container" aria-label="Go here to know current roll result">
-                    <div class="result-heading">
-                        current-roll
-                    </div>
-                    <div id="current-roll" class="result-text">
-                        -
+                <div class="die die-btn d4" data-type="d4" title="d4" aria-label="Roll a d4">
+                    <img src="assets/images/die-buttons-area/d4.svg" alt="a 4-sided die">
+                </div>
+                <div class="die die-btn d6" data-type="d6" title="d6 / regular dice" aria-label="Roll a d6 / regular dice">
+                    <img src="assets/images/die-buttons-area/d6.svg" alt="a 6-sided die">
+                </div>
+                <div class="die die-btn d8" data-type="d8" title="d8" aria-label="Roll a d8">
+                    <img src="assets/images/die-buttons-area/d8.svg" alt="a 8-sided die">
+                </div>
+                <div class="die die-btn d10" data-type="d10" title="d10" aria-label="Roll a d10">
+                    <img src="assets/images/die-buttons-area/d10.svg" alt="a 10-sided die">
+                </div>
+                <div class="die die-btn d12" data-type="d12" title="d12" aria-label="Roll a d12">
+                    <img src="assets/images/die-buttons-area/d12.svg" alt="a 12-sided die">
+                </div>
+                <div class="die die-btn d20" data-type="d20" title="d20" aria-label="Roll a d20">
+                    <img src="assets/images/die-buttons-area/d20.svg" alt="a 20-sided die">
+                </div>
+                <div id="d100-container" class="die die-btn" data-type="d100" title="d100" aria-label="Roll a d100">
+                    <div id="d100-contents">
+                        <img src="assets/images/die-buttons-area/d10.svg" alt="a 10-sided die" class="d100">
+                        <img src="assets/images/die-buttons-area/d10(180).svg" alt="another 10-sided die, together making a 100-sided set" class="d100" id="d10-180">
                     </div>
                 </div>
-                <div id="cumulative-roll-container" aria-label="Go here to know cumulative roll result">
-                    <div class="result-heading">
-                        cumulative-roll
+                <div class="die-other die-btn d-other" data-type="d-other" title="Input a number to roll using" aria-label="Roll a different die">
+                    <img src="assets/images/die-buttons-area/d-other.svg" alt="a 6-sided die with question marks instead of numbered sides">
+                </div>
+            </div>
+            <div id="roll-results-area" aria-label="Go here to know roll results">
+                <div id="roll-results-container">
+                    <div id="current-roll-container" aria-label="Go here to know current roll result">
+                        <div class="result-heading">
+                            current-roll
+                        </div>
+                        <div id="current-roll" class="result-text">
+                            -
+                        </div>
                     </div>
-                    <div id="cumulative-roll" class="result-text">
-                        -
+                    <div id="cumulative-roll-container" aria-label="Go here to know cumulative roll result">
+                        <div class="result-heading">
+                            cumulative-roll
+                        </div>
+                        <div id="cumulative-roll" class="result-text">
+                            -
+                        </div>
+                    </div>
+                </div>
+                <div id="previous-rolls-container" aria-label="Go here to know previous roll results">
+                        <div class="result-heading">
+                            previous-rolls
+                        </div>
+                        <div id="previous-rolls" class="result-text">
+                            -
+                        </div>
+                    </div>
+            </div>
+            <div id="action-buttons-area" aria-label="Go here to reset or save the rolls">
+                <div id="save-button" aria-label="Go here to save your set of roll results" onclick="save()">
+                    <div class="button-heading">
+                        Save
+                    </div>
+                </div>
+                <div id="reset-button" aria-label="Go here to reset the roll results" onclick="reset()">
+                    <div class="button-heading">
+                        Reset
                     </div>
                 </div>
             </div>
-            <div id="previous-rolls-container" aria-label="Go here to know previous roll results">
-                    <div class="result-heading">
-                        previous-rolls
-                    </div>
-                    <div id="previous-rolls" class="result-text">
-                        -
-                    </div>
-                </div>
-        </div>
-        <div id="action-buttons-area" aria-label="Go here to reset or save the rolls">
-            <div id="save-button" aria-label="Go here to save your set of roll results" onclick="save()">
-                <div class="button-heading">
-                    Save
-                </div>
-            </div>
-            <div id="reset-button" aria-label="Go here to reset the roll results" onclick="reset()">
-                <div class="button-heading">
-                    Reset
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="saves-area" aria-label="Go here to see saved rolls">
-        <table id="save-table">
-            <tr id="table-headings">
-                <th id="table-th-number">
-                    #
-                </th>
-                <th id="table-th-name">
-                    Save name
-                </th>
-                <th id="table-th-edit-button"></th>
-                <th id="table-th-rolls">
-                    Rolls
-                </th>
-                <th id="table-th-delete-button"></th>
-            </tr>
-        </table>
-    </section>
+        </section>
+        <section id="saves-area" aria-label="Go here to see saved rolls">
+            <table id="save-table">
+                <tr id="table-headings">
+                    <th id="table-th-number">
+                        #
+                    </th>
+                    <th id="table-th-name">
+                        Save name
+                    </th>
+                    <th id="table-th-edit-button"></th>
+                    <th id="table-th-rolls">
+                        Rolls
+                    </th>
+                    <th id="table-th-delete-button"></th>
+                </tr>
+            </table>
+        </section>
+    </main>
 </body>
 </html>

@@ -64,6 +64,12 @@ function dieOther () {
 }
 
 
+/** At DOM load, show content */
+let domContent = document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("main").style.display = "block";
+})
+
+
 /** At DOM load, listen for die choice (click/keydown) */
 let domLoad = document.addEventListener("DOMContentLoaded", function () {
     let dieButtons = document.getElementsByClassName("die-btn");
