@@ -37,6 +37,19 @@ function hideInstructions () {
 /* |  ||  |||  ||||| ||||| */
 
 
+/** Ensure the input from d-other is a number */
+function dieOther () {
+    let dieType = prompt("Enter the type of die to roll:", "Please input a number");
+    if (isNaN(dieType) == false) {
+        rollDie(dieType);
+    } else if (dieType == "no" || "No" || "NO") {
+        alert(`Oh, okay. My b.\nHave a good day.`)
+    } else {
+        dieOther();
+    };
+}
+
+
 /** At DOM load, listen for die choice (click/keydown) */
 let domLoad = document.addEventListener("DOMContentLoaded", function () {
     let dieButtons = document.getElementsByClassName("die-btn");
@@ -66,6 +79,8 @@ let domLoad = document.addEventListener("DOMContentLoaded", function () {
             } else if (this.getAttribute("data-type") === "d100") {
                 let dieType = 100;
                 rollDie(dieType);
+            } else if (this.getAttribute("data-type") === "d-other") {
+                dieOther();
             } else {
                 alert(`Please choose one of the available dice options.`);
             };
@@ -112,6 +127,21 @@ function showRolls () {
 /* ||||  |   |   |   ||||| ||||  */
 
 
+/** deletes the specified save slot */
+function deleteSave (bin) {
+    let row = bin.parentNode.parentNode.rowIndex;
+    document.getElementById("save-table").deleteRow(row);
+}
+
+
+/** renames the specified save slot */
+function renameSave (pen) {
+    let name = pen.parentNode.previousElementSibling;
+    let nameInput = prompt("Enter the new name:", name.innerHTML);
+    name.innerHTML = nameInput;
+}
+
+
 /** saves the set of rolls to a new save slot */
 function save () {
     ++saveIteration;
@@ -134,21 +164,6 @@ function save () {
     newRowDelete.innerHTML = deleteButton;
 
     deleteSave();
-}
-
-
-/** deletes the specified save slot */
-function deleteSave (bin) {
-    let row = bin.parentNode.parentNode.rowIndex;
-    document.getElementById("save-table").deleteRow(row);
-}
-
-
-/** renames the specified save slot */
-function renameSave (pen) {
-    let name = pen.parentNode.previousElementSibling;
-    let nameInput = prompt("Enter the new name:", name.innerHTML);
-    name.innerHTML = nameInput;
 }
 
 
