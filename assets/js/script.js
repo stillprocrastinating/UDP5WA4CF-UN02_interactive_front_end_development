@@ -42,10 +42,26 @@ function dieOther () {
     let dieType = prompt("Enter the type of die to roll:", "Please input a number");
     if (isNaN(dieType) == false) {
         rollDie(dieType);
-    } else if (dieType == "no" || "No" || "NO") {
-        alert(`Oh, okay. My b.\nHave a good day.`)
-    } else {
-        dieOther();
+    } else if (dieType === null) {
+        return;
+    } switch (dieType) {
+        case "the type of die to roll":
+        case "a number":
+            alert(`-_-`);
+            break;
+        case "69":
+            alert(`Nice.`);
+            rollDie(dieType);
+            break;
+        case "420":
+            alert(`Blaze it!`);
+            rollDie(dieType);
+            break;
+        case "no":
+        case "No":
+        case "NO":
+            alert(`Oh, okay. My b.\nHave a good day.`);
+            break;
     };
 }
 
