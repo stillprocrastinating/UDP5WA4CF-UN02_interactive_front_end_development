@@ -42,8 +42,6 @@ function dieOther () {
     let dieType = prompt("Enter the type of die to roll:", "Please input a number");
     if (isNaN(dieType) == false) {
         rollDie(dieType);
-    } else if (dieType === null) {
-        return;
     } switch (dieType) {
         case "the type of die to roll":
         case "a number":
@@ -118,13 +116,17 @@ function reset () {
 
 /** rolls the type of die click/keydown */
 function rollDie (dieType) {
-    let rollRandom = Math.floor(Math.random() * dieType) + 1;
+    if (dieType === null) {
+        return;
+    } else {
+        let rollRandom = Math.floor(Math.random() * dieType) + 1;
 
-    roll.currentRoll = `${rollRandom} (d${dieType})`;
-    roll.cumulativeRoll = roll.cumulativeRoll + rollRandom;
-    roll.previousRolls.push(` ${rollRandom}(d${dieType})`);
+        roll.currentRoll = `${rollRandom} (d${dieType})`;
+        roll.cumulativeRoll = roll.cumulativeRoll + rollRandom;
+        roll.previousRolls.push(` ${rollRandom}(d${dieType})`);
 
-    showRolls();
+        showRolls();
+    }
 }
 
 
