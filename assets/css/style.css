@@ -1,10 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap'); /* font h */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap'); /* font p */
 /* [WebAIM](https://webaim.org/resources/contrastchecker/) was used to check colour contrast between backgrounds and font colours. */
 /* Image/icon/font/content sources */
 
 
 
+:root {
+  --color-body-background: #FEE8C3;
+  --color-body-link: var(--color-dnd-red-dark);
+  --color-dnd-red-dark: #CC0000E5;
+  --color-dnd-red-light: #FF5C5CE5;
+  --color-transparent-dark: #00000050;
+  --color-header: #454731;
+  --color-body: #6F6B49;
+  --font-h: 'Eagle Lake', serif;
+  --font-p: 'Poiret One', sans-serif;
+}
+
 body {
     padding: 0px 10%;
+    min-height: 100vh;
+    background: var(--color-body-background);
+    font-family: var(--font-p);
+    max-width: 100vw;
 }
 
 
@@ -20,21 +38,36 @@ body {
 }
 
 #show-instructions-button {
-    border: 5px solid black;
-    padding: 5px;
+    border: 2px solid var(--color-header);
+    border-radius: 20px 0px;
+    padding: 5px 5px 5px 20px;
     display: block;
 }
 
 #hide-instructions-button {
-    border: 5px solid black;
-    padding: 5px;
+    border: 2px solid var(--color-header);
+    border-radius: 20px 0px 0px 0px;
+    padding: 5px 5px 5px 20px;
     display: none;
 }
 
 #instructions {
-    border: 5px solid magenta;
     padding: 5px;
     display: none;
+}
+
+.header {
+    color: var(--color-body-background);
+    background: var(--color-header);
+    font-family: var(--font-h);
+}
+
+.header-body {
+    color: var(--color-body-background);
+    background: var(--color-body);
+    font-family: var(--font-p);
+    border: 2px solid var(--color-header);
+    border-radius: 0px 0px 20px 0px;
 }
 
 
