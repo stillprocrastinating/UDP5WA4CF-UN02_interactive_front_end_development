@@ -89,6 +89,16 @@ body {
     border-radius: 0px 0px 20px 0px;
 }
 
+.instructions-die {
+    list-style-type: square;
+}
+
+.die-keyup {
+    background: var(--color-transparent-dark);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
 
 /* ||||   |||  |     |
 /* |   | |   | |     |

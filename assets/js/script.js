@@ -70,8 +70,8 @@ let domContent = document.addEventListener("DOMContentLoaded", function () {
 })
 
 
-/** At DOM load, listen for die choice (click/keydown) */
-let domLoad = document.addEventListener("DOMContentLoaded", function () {
+/** At DOM load, listen for die choice (click) */
+document.addEventListener("DOMContentLoaded", function () {
     let dieButtons = document.getElementsByClassName("die-btn");
     for (let dieButton of dieButtons) {
         dieButton.addEventListener("click", function () {
@@ -106,6 +106,40 @@ let domLoad = document.addEventListener("DOMContentLoaded", function () {
             };
         });
     };
+})
+
+
+/** At DOM load, listen for die choice (keyup) */
+document.addEventListener("DOMContentLoaded", function () {
+    addEventListener("keyup", (event) => {
+        if (event.key == "2") {
+            let dieType = 2;
+            rollDie(dieType);
+        } else if (event.key == "4") {
+            let dieType = 4;
+            rollDie(dieType);
+        } else if (event.key == "6") {
+            let dieType = 6;
+            rollDie(dieType);
+        } else if (event.key == "8") {
+            let dieType = 8;
+            rollDie(dieType);
+        } else if (event.key == "0") {
+            let dieType = 10;
+            rollDie(dieType);
+        } else if (event.key == "d") {
+            let dieType = 12;
+            rollDie(dieType);
+        } else if (event.key == "t") {
+            let dieType = 20;
+            rollDie(dieType);
+        } else if (event.key == "h") {
+            let dieType = 100;
+            rollDie(dieType);
+        } else if (event.key == "o") {
+            dieOther();
+        };
+    });
 })
 
 
