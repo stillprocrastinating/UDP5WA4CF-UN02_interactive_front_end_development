@@ -49,11 +49,9 @@ function dieOther () {
             break;
         case "69":
             alert(`Nice.`);
-            rollDie(dieType);
             break;
         case "420":
             alert(`Blaze it!`);
-            rollDie(dieType);
             break;
         case "no":
         case "No":
