@@ -260,17 +260,22 @@ td {
 }
 
 #table-th-edit-button {
-    width: 10px;
+    width: 19px;
 }
 
 #table-th-delete-button {
-    width: 10px;
+    width: 19px;
 }
 
 /*.rename-button {}*/
 
 .rename-button:hover {
     stroke: red;
+}
+
+.rename-button:active {
+    stroke: lime;
+    transition: black 2s ease 2s; /* transition-property / transition-duration / transition-timing-function / transition-delay */
 }
 
 /*.delete-button {}*/
