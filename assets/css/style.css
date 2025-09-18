@@ -140,7 +140,8 @@ body {
 .d8,
 .d10,
 .d12,
-.d20 {
+.d20,
+.d-other {
     border: 5px solid black;
     padding: 5px;
 }
