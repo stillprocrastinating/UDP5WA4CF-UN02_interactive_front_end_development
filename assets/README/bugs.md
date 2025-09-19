@@ -11,3 +11,4 @@
 | 9 | 2025-09-11 | `deleteSave()` `eventListener` / `parentNode` broken | 2025-09-13 | Add `this` to `onclick` | [main ef2735e] deleteSave(){} - functional ||
 | 10 | 2025-09-14 | If `dieOther()` prompt is cancelled, `rollDie()` rolls a `1 (dnull)` | 2025-09-14 | `rollDie()` includes `if (dieType === null) {return;}` | [main 30ebe94] dieOther(){cancelled} - functional ||
 | 11 | 2025-09-14 | Custom die rolls with special messaging cause double rolls | 2025-09-16 | The `switch` section of `dieOther()` included `rollDie(dieType);` for relevant cases, but the relevant cases (aka, the numbers) were already being rolled in `if (isNan(dieType) == false) {rollDie(dieType);}` | [main 123ba04] dieOther(){no double rolls} - functional ||
+| 12 | 2025-09-19 | `#d10-180` clips into `#d100-d10` | 2025-09-19 | Increase `border-radius` from `15px` to `20px` | 
