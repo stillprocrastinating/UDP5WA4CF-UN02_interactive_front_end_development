@@ -237,8 +237,19 @@ table {
     text-align: center;
 }
 
-tr {
+tr.active {
     border: 5px solid magenta;
+}
+
+tr.delete1 {
+    background: red;
+}
+
+tr.delete2 {
+    color: var(--color-body-background);
+    border: 5px solid var(--color-body-background);
+    background: var(--color-body-background);
+    transition: all 2s ease;
 }
 
 th {
@@ -247,7 +258,6 @@ th {
 }
 
 td {
-    border: 5px solid lime;
     padding: 5px;
 }
 
@@ -283,4 +293,8 @@ td {
 .delete-button:hover {
     stroke: red;
     transition: stroke 400ms ease 100ms; /* transition-property / transition-duration / transition-timing-function / transition-delay */
+}
+
+.delete-button:active {
+    stroke: lime;
 }

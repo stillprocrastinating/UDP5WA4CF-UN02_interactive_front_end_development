@@ -185,8 +185,11 @@ function showRolls () {
 
 /** deletes the specified save slot */
 function deleteSave (bin) {
-    let row = bin.parentNode.parentNode.rowIndex;
-    document.getElementById("save-table").deleteRow(row);
+    let rowN = bin.parentNode.parentNode.rowIndex;
+    let rowO = document.getElementById(`row-${saveIteration}`);
+    rowO.classList.toggle("delete1")
+    setTimeout(function () {rowO.classList.toggle("delete2")}, 1000);
+    setTimeout(function () {document.getElementById("save-table").deleteRow(rowN)}, 3000);
 }
 
 
@@ -208,6 +211,8 @@ function save () {
     
     let existingTable = document.getElementById("save-table");
     let newRow = existingTable.insertRow(-1);
+    newRow.id = `row-${saveIteration}`;
+    newRow.className = "active";
     let newRowNumber = newRow.insertCell(0);
     newRowNumber.innerHTML = saveIteration;
     let newRowName = newRow.insertCell(1);
