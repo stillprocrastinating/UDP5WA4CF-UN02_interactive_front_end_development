@@ -271,15 +271,16 @@ td {
 
 .rename-button:hover {
     stroke: red;
+    transition: stroke 400ms ease 100ms; /* transition-property / transition-duration / transition-timing-function / transition-delay */
 }
 
 .rename-button:active {
     stroke: lime;
-    transition: black 2s ease 2s; /* transition-property / transition-duration / transition-timing-function / transition-delay */
 }
 
 /*.delete-button {}*/
 
 .delete-button:hover {
     stroke: red;
+    transition: stroke 400ms ease 100ms; /* transition-property / transition-duration / transition-timing-function / transition-delay */
 }
