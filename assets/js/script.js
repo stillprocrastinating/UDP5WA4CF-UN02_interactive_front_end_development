@@ -6,10 +6,10 @@ let roll = {
     previousRolls: [],
 }
 
-
 /** object to contain saved rolls */
 let savedRolls = {}
 let saveIteration = 0;
+
 
 /* | |   |  |||| ||||| ||||  |   |  |||| ||||| |  |||  |   |  ||||
 /* | ||  | |       |   |   | |   | |       |   | |   | ||  | |
@@ -36,7 +36,6 @@ function hideInstructions () {
 /* | |   |   | |     |
 /* |  ||  |||  ||||| ||||| */
 
-
 /** Ensure the input from d-other is a number */
 function dieOther () {
     let dieType = prompt("Enter the type of die to roll:", "Please input a number");
@@ -61,12 +60,10 @@ function dieOther () {
     };
 }
 
-
 /** At DOM load, show content */
 let domContent = document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("main").style.display = "block";
 })
-
 
 /** At DOM load, listen for die choice (click) */
 document.addEventListener("DOMContentLoaded", function () {
@@ -106,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 })
 
-
 /** At DOM load, listen for die choice (keyup) */
 document.addEventListener("DOMContentLoaded", function () {
     addEventListener("keyup", (event) => {
@@ -140,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })
 
-
 /** starts a new roll set */
 function reset () {
     roll.cumulativeRoll = 0;
@@ -150,7 +145,6 @@ function reset () {
 	document.getElementById("cumulative-roll").textContent = `-`;
 	document.getElementById("previous-rolls").textContent = `-`;
 }
-
 
 /** rolls the type of die click/keydown */
 function rollDie (dieType) {
@@ -167,7 +161,6 @@ function rollDie (dieType) {
     }
 }
 
-
 /** displays the relevent rolls in the HTML */
 function showRolls () {
 	document.getElementById("current-roll").textContent = roll.currentRoll;
@@ -182,7 +175,6 @@ function showRolls () {
 /*     | |   |  | |  |         |
 /* ||||  |   |   |   ||||| ||||  */
 
-
 /** deletes the specified save slot */
 function deleteSave (bin) {
     let rowN = bin.parentNode.parentNode.rowIndex;
@@ -192,14 +184,12 @@ function deleteSave (bin) {
     setTimeout(function () {document.getElementById("save-table").deleteRow(rowN)}, 3000);
 }
 
-
 /** renames the specified save slot */
 function renameSave (pen) {
     let name = pen.parentNode.previousElementSibling;
     let nameInput = prompt("Enter the new name:", name.innerHTML);
     name.innerHTML = nameInput;
 }
-
 
 /** saves the set of rolls to a new save slot */
 function save () {
@@ -233,7 +223,6 @@ function save () {
 /*   |   ||||  |||||   |
 /*   |   |         |   |
 /*   |   ||||| |||||   | */
-
 
 /** link to script.test.js */
 //module.exports = { roll, savedRolls, domLoad, rollDie };
