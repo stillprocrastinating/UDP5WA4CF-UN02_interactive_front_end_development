@@ -36,6 +36,19 @@ function hideInstructions () {
 /* | |   |   | |     |
 /* |  ||  |||  ||||| ||||| */
 
+/** Upon .die:hover, change svg path color */
+function dieColor () {
+    let dieIndex = 0;
+    let color = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
+    document.getElementsByClassName("die-color")[dieIndex].setAttribute("fill", color);
+}
+
+/** Upon !.die:hover, change svg path color to white */
+function dieColorOut () {
+    let dieIndex = 0;
+    document.getElementsByClassName("die-color")[dieIndex].setAttribute("fill", "#fff");
+}
+
 /** Ensure the input from d-other is a number */
 function dieOther () {
     let dieType = prompt("Enter the type of die to roll:", "Please input a number");
