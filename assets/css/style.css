@@ -61,6 +61,7 @@ body {
     border-radius: 20px 0px;
     padding: 5px 5px 5px 20px;
     display: block;
+    cursor: pointer;
 }
 
 #hide-instructions-button {
@@ -68,6 +69,7 @@ body {
     border-radius: 20px 0px 0px 0px;
     padding: 5px 5px 5px 20px;
     display: none;
+    cursor: pointer;
 }
 
 #instructions {
@@ -114,6 +116,7 @@ body {
 .die {
     border: 5px solid black;
     padding: 5px;
+    cursor: pointer;
 }
 
 
@@ -211,6 +214,7 @@ body {
     padding: 5px;
     text-align: center;
     flex: 0 150px; /* grow 0 / shrink 1 / basis 150px */
+    cursor: pointer;
 }
 
 #save-button:hover,
@@ -278,24 +282,22 @@ td {
     width: 19px;
 }
 
-/*.rename-button {}*/
+.rename-button,
+.delete-button {
+    cursor: pointer;
+}
 
 .rename-button:hover {
     stroke: red;
     transition: stroke 400ms ease 100ms; /* transition-property / transition-duration / transition-timing-function / transition-delay */
 }
 
-.rename-button:active {
-    stroke: lime;
-}
-
-/*.delete-button {}*/
-
 .delete-button:hover {
     stroke: red;
     transition: stroke 400ms ease 100ms; /* transition-property / transition-duration / transition-timing-function / transition-delay */
 }
 
+.rename-button:active,
 .delete-button:active {
     stroke: lime;
 }
