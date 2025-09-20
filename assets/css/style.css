@@ -243,6 +243,7 @@ tr.active {
 
 tr.delete1 {
     background: red;
+    transition: all 1s ease;
 }
 
 tr.delete2 {
