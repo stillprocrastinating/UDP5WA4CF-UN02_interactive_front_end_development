@@ -41,13 +41,19 @@ function dieColor (dieIndex) {
     let color = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
     document.getElementsByClassName("die-color")[dieIndex].setAttribute("fill", color);
     
-    let colorD10 = document.getElementsByClassName("die-color")[7].getAttribute("fill");
-    document.getElementsByClassName("die-color")[8].setAttribute("fill", colorD10 + "99");
+    let colorD100 = document.getElementsByClassName("die-color")[7].getAttribute("fill");
+    //document.getElementsByClassName("die-color")[8].setAttribute("fill", colorD100 + "99");
+    if (colorD100 == "rgb(255, 255, 255)") {
+        document.getElementsByClassName("die-color")[8].setAttribute("fill", "#fff");
+    } else if (colorD100 != "rgb(255, 255, 255)") {
+        document.getElementsByClassName("die-color")[8].setAttribute("fill", colorD100 + "99");
+    }
 }
 
 /** Upon !.die:hover, change svg path color to white */
 function dieColorOut (dieIndex) {
     document.getElementsByClassName("die-color")[dieIndex].setAttribute("fill", "#fff");
+    document.getElementsByClassName("die-color")[8].setAttribute("fill", "#fff");
 }
 
 /** Ensure the input from d-other is a number */
