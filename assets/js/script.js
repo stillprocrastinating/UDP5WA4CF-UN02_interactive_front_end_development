@@ -42,7 +42,7 @@ function dieColor (dieIndex) {
     document.getElementsByClassName("die-color")[dieIndex].setAttribute("fill", color);
     
     let colorD10 = document.getElementsByClassName("die-color")[7].getAttribute("fill");
-    document.getElementsByClassName("die-color")[8].setAttribute("fill", colorD10);
+    document.getElementsByClassName("die-color")[8].setAttribute("fill", colorD10 + "99");
 }
 
 /** Upon !.die:hover, change svg path color to white */
