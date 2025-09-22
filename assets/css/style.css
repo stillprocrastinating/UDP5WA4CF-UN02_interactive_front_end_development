@@ -163,6 +163,10 @@ body {
     width: 60%;
 }
 
+#d100-d10 {
+    height: 48px;
+}
+
 #d10-180 {
     position: absolute;
     left: 40%;

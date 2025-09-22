@@ -2,7 +2,7 @@
 let roll = {
     cumulativeRoll: 0,
     currentRoll: 0,
-    dieTypes: ["d2", "d4", "d6", "d8", "d10", "d12", "d20", "d100"],
+    dieTypes: ["d2", "d4", "d6", "d8", "d10", "d12", "d20", "d100", "d-other"],
     previousRolls: [],
 }
 
@@ -37,15 +37,16 @@ function hideInstructions () {
 /* |  ||  |||  ||||| ||||| */
 
 /** Upon .die:hover, change svg path color */
-function dieColor () {
-    let dieIndex = 0;
+function dieColor (dieIndex) {
     let color = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
     document.getElementsByClassName("die-color")[dieIndex].setAttribute("fill", color);
+    
+    let colorD10 = document.getElementsByClassName("die-color")[7].getAttribute("fill");
+    document.getElementsByClassName("die-color")[8].setAttribute("fill", colorD10);
 }
 
 /** Upon !.die:hover, change svg path color to white */
-function dieColorOut () {
-    let dieIndex = 0;
+function dieColorOut (dieIndex) {
     document.getElementsByClassName("die-color")[dieIndex].setAttribute("fill", "#fff");
 }
 
