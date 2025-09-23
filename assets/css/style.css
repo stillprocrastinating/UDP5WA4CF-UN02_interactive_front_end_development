@@ -29,6 +29,10 @@ body {
     visibility: hidden;
 }
 
+.transparent-dark {
+    color: var(--color-transparent-dark);
+}
+
 
 /* |   |  |||   ||||  |||| ||||  | ||||  |||||
 /* ||  | |   | |     |     |   | | |   |   |
