@@ -13,6 +13,7 @@
   --color-transparent-dark: #00000050;
   --color-header: #454731;
   --color-body: #6F6B49;
+  --color-body-light: #6f6b4922;
   --font-h: 'Eagle Lake', serif;
   --font-p: 'Poiret One', sans-serif;
 }
@@ -247,34 +248,38 @@ body {
 /* ||||  |   |   |   ||||| ||||  */
 
 table {
-    border: 5px solid cyan;
     padding: 5px;
     width: 100%;
     text-align: center;
 }
 
+tr:nth-child(odd) {
+  background: var(--color-body-light);
+}
+
 tr.active {
-    border: 5px solid magenta;
+    font-weight: bold;
 }
 
 tr.delete1 {
-    background: red;
+    background: var(--color-dnd-red-dark);
     transition: all 1s ease;
 }
 
 tr.delete2 {
     color: var(--color-body-background);
-    border: 5px solid var(--color-body-background);
     background: var(--color-body-background);
     transition: all 2s ease;
 }
 
 th {
-    border: 5px solid black;
+    background: var(--color-header);
+    color: var(--color-body-background);
     padding: 5px;
 }
 
 td {
+    color: var(--color-header);
     padding: 5px;
 }
 
@@ -297,19 +302,26 @@ td {
 .rename-button,
 .delete-button {
     cursor: pointer;
+    stroke: var(--color-header);
 }
 
-.rename-button:hover {
-    stroke: red;
-    transition: stroke 400ms ease 100ms; /* transition-property / transition-duration / transition-timing-function / transition-delay */
+tr.delete1 td,
+tr.delete1 .rename-button,
+tr.delete1 .delete-button,
+tr.delete2 td,
+tr.delete2 .rename-button,
+tr.delete2 .delete-button {
+    color: currentColor;
+    stroke: currentColor;
 }
 
+.rename-button:hover,
 .delete-button:hover {
-    stroke: red;
+    stroke: var(--color-dnd-red-light);
     transition: stroke 400ms ease 100ms; /* transition-property / transition-duration / transition-timing-function / transition-delay */
 }
 
 .rename-button:active,
 .delete-button:active {
-    stroke: lime;
+    stroke: var(--color-body-link);
 }
