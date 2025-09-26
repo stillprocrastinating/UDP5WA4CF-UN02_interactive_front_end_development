@@ -60,7 +60,9 @@ function dieOther () {
     let dieType = prompt("Enter the type of die to roll:", "Please input a number");
     if (isNaN(dieType) == false) {
         rollDie(dieType);
-    } switch (dieType) {
+    } else if (isNaN(dieType) == true) {
+        dieOther();
+    } switch (dieType) {
         case "the type of die to roll":
         case "a number":
             alert(`-_-`);

@@ -13,3 +13,4 @@
 | 11 | 2025-09-14 | Custom die rolls with special messaging cause double rolls | 2025-09-16 | The `switch` section of `dieOther()` included `rollDie(dieType);` for relevant cases, but the relevant cases (aka, the numbers) were already being rolled in `if (isNan(dieType) == false) {rollDie(dieType);}` | [main 123ba04] dieOther(){no double rolls} - functional ||
 | 12 | 2025-09-19 | `#d10-180` clips into `#d100-d10` | 2025-09-19 | Increase `border-radius` from `15px` to `20px` | [main 65b8fa3] .d100 doesn't clip ||
 | 13 | 2025-09-22 | `#d10-180` becomes colored upon any `.die:hover` | 2025-09-23 | `#d10-180` only becomes colored upon `#d100-10:hover` | [main 4b3e39b] dieColor(){d100 upgrade} - functional ||
+| 14 | 2025-09-24 | `dieOther()` does not include a case for input text which is not a specified scenario | 2025-09-26 | `dieOther(){... else if (isNaN(dieType) == true){dieOther();}}` | 
