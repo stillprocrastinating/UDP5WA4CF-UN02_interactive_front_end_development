@@ -14,3 +14,4 @@
 | 12 | 2025-09-19 | `#d10-180` clips into `#d100-d10` | 2025-09-19 | Increase `border-radius` from `15px` to `20px` | [main 65b8fa3] .d100 doesn't clip ||
 | 13 | 2025-09-22 | `#d10-180` becomes colored upon any `.die:hover` | 2025-09-23 | `#d10-180` only becomes colored upon `#d100-10:hover` | [main 4b3e39b] dieColor(){d100 upgrade} - functional ||
 | 14 | 2025-09-24 | `dieOther()` does not include a case for input text which is not a specified scenario | 2025-09-26 | `dieOther(){... else if (isNaN(dieType) == true){dieOther();}}` | [main 80e86bf] dieOther() restarts if invalid text is input ||
+| 15 | 2025-09-26 | Deleting saves affects multiple rows | 2025-09-26 | Use `rowN` instead of `saveIteration` in `getElementById` | 
