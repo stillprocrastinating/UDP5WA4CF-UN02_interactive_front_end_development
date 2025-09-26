@@ -7,7 +7,6 @@
 
 :root {
   --color-body-background: #FEE8C3;
-  --color-body-link: var(--color-dnd-red-dark);
   --color-dnd-red-dark: #CC0000E5;
   --color-dnd-red-light: #FF5C5CE5;
   --color-transparent-dark: #00000050;
@@ -86,6 +85,11 @@ body {
     display: none;
 }
 
+#instructions ol,
+#instructions ul {
+    padding-left: 15px;
+}
+
 .header {
     color: var(--color-body-background);
     background: var(--color-header);
@@ -102,6 +106,14 @@ body {
 
 .instructions-die {
     list-style-type: square;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+
+}
+
+#instructions-die li {
+    flex-basis: 100px;
 }
 
 .die-keyup {
@@ -324,4 +336,17 @@ tr.delete2 .delete-button {
 .rename-button:active,
 .delete-button:active {
     stroke: var(--color-body-link);
+}
+
+/*  ||||  |||| ||||  ||||| ||||| |   |  ||||
+/* |     |     |   | |     |     ||  | |
+/*  |||  |     ||||  ||||  ||||  | | |  |||
+/*     | |     | |   |     |     |  ||     |
+/* ||||   |||| |  || ||||| ||||| |   | ||||  */
+
+@media screen and (min-width: 768px) {
+    #instructions ol,
+    #instructions ul {
+        padding-left: 2rem;
+    }
 }
