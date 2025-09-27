@@ -10,6 +10,11 @@ let roll = {
 let savedRolls = {}
 let saveIteration = 0;
 
+/** At DOM load, show content */
+let domContent = document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("main").style.display = "block";
+})
+
 
 /* | |   |  |||| ||||| ||||  |   |  |||| ||||| |  |||  |   |  ||||
 /* | ||  | |       |   |   | |   | |       |   | |   | ||  | |
@@ -80,11 +85,6 @@ function dieOther () {
             break;
     };
 }
-
-/** At DOM load, show content */
-let domContent = document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("main").style.display = "block";
-})
 
 /** At DOM load, listen for die choice (click) */
 document.addEventListener("DOMContentLoaded", function () {
