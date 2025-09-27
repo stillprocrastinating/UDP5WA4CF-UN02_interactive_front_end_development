@@ -60,7 +60,6 @@ body {
 /* | |   | ||||    |   |  ||  |||   ||||   |   |  |||  |   | ||||  */
 
 #instructions-area {
-    border: 5px solid cyan;
     padding: 5px;
 }
 
@@ -122,6 +121,14 @@ body {
     border-radius: 5px;
 }
 
+.die-label {
+    display: none;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-header);
+}
+
 
 /* ||||   |||  |     |
 /* |   | |   | |     |
@@ -130,7 +137,6 @@ body {
 /* |  ||  |||  ||||| |||||  */
 
 #roll-area {
-    border: 5px solid cyan;
     padding: 5px;
 }
 
@@ -144,7 +150,6 @@ body {
 /* die-buttons-area */
 
 #die-buttons-area {
-    border: 5px solid magenta;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -195,12 +200,10 @@ body {
 /* roll-results-area */
 
 #roll-results-area {
-    border: 5px solid magenta;
     padding: 5px;
 }
 
 #roll-results-container {
-    border: 5px solid lime;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -211,7 +214,6 @@ body {
 #current-roll-container,
 #cumulative-roll-container,
 #previous-rolls-container {
-    border: 5px solid black;
     padding: 5px;
     text-align: center;
     flex: 0 250px; /* grow 0 / shrink 1 / basis 250px */
@@ -280,6 +282,7 @@ table {
     margin-bottom: 50px;
 }
 
+#previous-rolls-container,
 tr:nth-child(odd) {
   background: var(--color-body-light);
 }

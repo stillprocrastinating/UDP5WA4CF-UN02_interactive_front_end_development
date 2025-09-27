@@ -26,12 +26,20 @@ function showInstructions () {
     document.getElementById("instructions").style.display = "block";
     document.getElementById("hide-instructions-button").style.display = "block";
     document.getElementById("show-instructions-button").style.display = "none";
+    let dieLabels = document.getElementsByClassName("die-label");
+    for (let i = 0; i < dieLabels.length; i++) {
+        dieLabels[i].style.display = "block";
+    }
 }
 
 function hideInstructions () {
     document.getElementById("show-instructions-button").style.display = "block";
     document.getElementById("hide-instructions-button").style.display = "none";
     document.getElementById("instructions").style.display = "none";
+    let dieLabels = document.getElementsByClassName("die-label");
+    for (let i = 0; i < dieLabels.length; i++) {
+        dieLabels[i].style.display = "none";
+    }
 }
 
 
