@@ -243,6 +243,7 @@ body {
 
 .button-heading {
     border: 5px solid transparent;
+    font-weight: bold;
 }
 
 #save-button:hover {
@@ -258,7 +259,6 @@ body {
 
 .button-heading:hover {
     color: var(--color-body-background);
-    font-weight: bold;
 }
 
 #save-button:active,
