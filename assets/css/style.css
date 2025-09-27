@@ -225,7 +225,6 @@ body {
 /* action-buttons-area */
 
 #action-buttons-area {
-    border: 5px solid magenta;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -235,21 +234,36 @@ body {
 
 #save-button,
 #reset-button {
-    border: 5px solid black;
-    padding: 5px;
+    background: var(--color-body) url(../images/action-buttons-area/header_background_image.webp) no-repeat 49% 89% / auto;
+    border: 1px solid var(--color-header);
     text-align: center;
     flex: 0 150px; /* grow 0 / shrink 1 / basis 150px */
     cursor: pointer;
 }
 
-#save-button:hover,
+.button-heading {
+    border: 5px solid transparent;
+}
+
+#save-button:hover {
+    transition: 1s;
+    background: var(--color-header) url(../images/action-buttons-area/header_background_image.webp) no-repeat 83% 100% / auto;
+}
+
 #reset-button:hover {
-    background-color: red;
+    transition: 1s;
+    background: var(--color-dnd-red-light) url(../images/action-buttons-area/header_background_image.webp) no-repeat 83% 100% / auto;
+    filter: hue-rotate(-90deg) invert(100%);
+}
+
+.button-heading:hover {
+    color: var(--color-body-background);
+    font-weight: bold;
 }
 
 #save-button:active,
 #reset-button:active {
-    background-color: green;
+    background-color: var(--color-dnd-red-dark);
 }
 
 
