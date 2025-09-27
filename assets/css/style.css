@@ -277,6 +277,7 @@ table {
     padding: 5px;
     width: 100%;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 tr:nth-child(odd) {
