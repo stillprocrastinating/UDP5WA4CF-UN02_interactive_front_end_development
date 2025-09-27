@@ -71,26 +71,26 @@ function dieColorOut (dieIndex) {
 /** Ensure the input from d-other is a number */
 function dieOther () {
     let dieType = prompt("Enter the type of die to roll:", "Please input a number");
-    if (isNaN(dieType) == false) {
+    if (dieType == "the type of die to roll") {
+        alert(`-_-`);
+    } else if (dieType == "a number") {
+        alert(`-_-`);
+    } else if (dieType == "69") {
+        alert(`Nice.`);
         rollDie(dieType);
+    } else if (dieType == "420") {
+        alert(`Blaze it!`);
+        rollDie(dieType);
+    } else if (dieType == "no") {
+        alert(`Oh, okay. My b.\nHave a good day.`);
+    } else if (dieType == "No") {
+        alert(`Oh, okay. My b.\nHave a good day.`);
+    } else if (dieType == "NO") {
+        alert(`Oh, okay. My b.\nHave a good day.`);
     } else if (isNaN(dieType) == true) {
-        dieOther();
-    } switch (dieType) {
-        case "the type of die to roll":
-        case "a number":
-            alert(`-_-`);
-            break;
-        case "69":
-            alert(`Nice.`);
-            break;
-        case "420":
-            alert(`Blaze it!`);
-            break;
-        case "no":
-        case "No":
-        case "NO":
-            alert(`Oh, okay. My b.\nHave a good day.`);
-            break;
+        dieOther();
+    } else if (isNaN(dieType) == false) {
+        rollDie(dieType);
     };
 }
 
