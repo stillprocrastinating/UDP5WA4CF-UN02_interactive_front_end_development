@@ -16,3 +16,4 @@
 | 14 | 2025-09-24 | `dieOther()` does not include a case for input text which is not a specified scenario | 2025-09-26 | `dieOther(){... else if (isNaN(dieType) == true){dieOther();}}` | [main 80e86bf] dieOther() restarts if invalid text is input ||
 | 15 | 2025-09-26 | Deleting saves affects multiple rows | 2025-09-26 | Use `rowN` instead of `saveIteration` in `getElementById` | [main ad81384] deleteSave() deletes correct row | How did I not notice that before?! |
 | 16 | 2025-09-27 | `dieOther()` specified text scenarios no longer work | 2025-09-27 | Changed `switch` into `else if` | [main 15cc536] dieOther(){~~switch~~} | Really should've checked this... |
+| 17 | 2025-09-28 | Deleting saves _still_ affects multiple rows - specifically when deleting a row with a larger index than an already deleted row | 2025-09-28 | Changed `getElementById(row-${rowN})` to `bin.parentNode.parentNode` |

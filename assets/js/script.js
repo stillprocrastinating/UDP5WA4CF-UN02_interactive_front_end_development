@@ -206,11 +206,10 @@ function showRolls () {
 
 /** deletes the specified save slot */
 function deleteSave (bin) {
-    let rowN = bin.parentNode.parentNode.rowIndex;
-    let rowO = document.getElementById(`row-${rowN}`);
-    rowO.classList.toggle("delete1")
-    setTimeout(function () {rowO.classList.toggle("delete2")}, 1000);
-    setTimeout(function () {document.getElementById("save-table").deleteRow(rowN)}, 3000);
+    let row = bin.parentNode.parentNode;
+    row.classList.toggle("delete1")
+    setTimeout(function () {row.classList.toggle("delete2")}, 1000);
+    setTimeout(function () {document.getElementById("save-table").deleteRow(row.rowIndex)}, 3000);
 }
 
 /** renames the specified save slot */
