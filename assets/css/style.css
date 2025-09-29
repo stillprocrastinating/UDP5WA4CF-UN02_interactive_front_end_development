@@ -18,7 +18,6 @@
 }
 
 body {
-    padding: 0px 10%;
     min-height: 100vh;
     background: var(--color-body-background);
     font-family: var(--font-p);
@@ -34,6 +33,32 @@ body {
 }
 
 
+/* |   | |||||  |||  ||||  ||||| ||||
+/* |   | |     |   | |   | |     |   |
+/* ||||| ||||  ||||| |   | ||||  ||||
+/* |   | |     |   | |   | |     | |
+/* |   | ||||| |   | ||||  ||||| |  || */
+
+#header {
+    background: var(--color-body-light) url(../images/header/header_background_image.webp) no-repeat 30% 100% / cover;
+    height: 200px;
+}
+
+#header-h {
+    color: var(--color-body-background);
+    font-family: var(--font-h);
+    text-align: center;
+    padding-top: 20px;
+}
+
+#header-p {
+    color: var(--color-dnd-red-light);
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+
 /* |   |  |||   ||||  |||| ||||  | ||||  |||||
 /* ||  | |   | |     |     |   | | |   |   |
 /* | | | |   |  |||  |     ||||  | ||||    |
@@ -42,6 +67,7 @@ body {
 
 #main {
     display: none;
+    padding: 0px 10%;
 }
 
 #noscript {
@@ -236,7 +262,7 @@ body {
 
 #save-button,
 #reset-button {
-    background: var(--color-body) url(../images/action-buttons-area/header_background_image.webp) no-repeat 49% 89% / auto;
+    background: var(--color-body) url(../images/header/header_background_image.webp) no-repeat 49% 89% / auto;
     border: 1px solid var(--color-header);
     text-align: center;
     flex: 0 150px; /* grow 0 / shrink 1 / basis 150px */
@@ -250,12 +276,12 @@ body {
 
 #save-button:hover {
     transition: 1s;
-    background: var(--color-header) url(../images/action-buttons-area/header_background_image.webp) no-repeat 83% 100% / auto;
+    background: var(--color-header) url(../images/header/header_background_image.webp) no-repeat 83% 100% / auto;
 }
 
 #reset-button:hover {
     transition: 1s;
-    background: var(--color-dnd-red-light) url(../images/action-buttons-area/header_background_image.webp) no-repeat 83% 100% / auto;
+    background: var(--color-dnd-red-light) url(../images/header/header_background_image.webp) no-repeat 83% 100% / auto;
     filter: hue-rotate(-90deg) invert(100%);
 }
 
@@ -363,6 +389,15 @@ tr.delete2 .delete-button {
 /* ||||   |||| |  || ||||| ||||| |   | ||||  */
 
 @media screen and (min-width: 768px) {
+    #header {
+        height: 400px;
+    }
+
+    #header-h {
+        text-align: left;
+        padding: 75px 100px;
+    }
+
     #instructions ol,
     #instructions ul {
         padding-left: 2rem;
