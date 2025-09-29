@@ -13,6 +13,8 @@ let saveIteration = 0;
 /** At DOM load, show content */
 let domContent = document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("main").style.display = "block";
+
+    bigScreen();
 })
 
 
@@ -245,6 +247,21 @@ function save () {
     setTimeout(function () {newRow.classList.toggle("active")}, 5000);
 
     deleteSave();
+}
+
+
+/* |||||  |||   |||  ||||| ||||| ||||
+/* |     |   | |   |   |   |     |   |
+/* ||||  |   | |   |   |   ||||  ||||
+/* |     |   | |   |   |   |     | |
+/* |      |||   |||    |   ||||| |  || */
+
+function bigScreen () {
+    if (window.outerHeight > document.body.outerHeight) {
+        document.footer.classList.toggle("footer-fixed");
+    }
+        console.log(window.outerHeight);
+        console.log(document.querySelector("body").getAttribute("height"));
 }
 
 

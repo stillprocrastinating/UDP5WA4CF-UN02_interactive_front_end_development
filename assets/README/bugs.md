@@ -17,3 +17,4 @@
 | 15 | 2025-09-26 | Deleting saves affects multiple rows | 2025-09-26 | Use `rowN` instead of `saveIteration` in `getElementById` | [main ad81384] deleteSave() deletes correct row | How did I not notice that before?! |
 | 16 | 2025-09-27 | `dieOther()` specified text scenarios no longer work | 2025-09-27 | Changed `switch` into `else if` | [main 15cc536] dieOther(){~~switch~~} | Really should've checked this... |
 | 17 | 2025-09-28 | Deleting saves _still_ affects multiple rows - specifically when deleting a row with a larger index than an already deleted row | 2025-09-28 | Changed `getElementById(row-${rowN})` to `bin.parentNode.parentNode` | [main 3e93626] deleteSave() deletes correct row repeatedly ||
+| 18 | 2025-09-29 | `#footer` is not ideally situated; aim is to use JS to toggle `.footer-fixed` when body height is smaller than window height |||| Temporary solution: `#container{min-height: 100vh;}` around `#header` & `#main` |
