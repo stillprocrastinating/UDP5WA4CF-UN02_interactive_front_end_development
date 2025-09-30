@@ -397,11 +397,49 @@ tr.delete2 .delete-button {
     text-align: center;
     background: var(--color-body);
     color: var(--color-body-background);
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .footer-fixed {
   position: fixed;
   bottom: 0px;
+}
+
+.footer-button {
+    width: 60px;
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+
+.footer-svg-path {
+    fill: black;
+    padding: 5px;
+}
+
+div:hover .footer-svg-path {
+    transition: all 1s;
+}
+
+#discord:hover,
+#github:hover {
+    background: var(--color-transparent-dark);
+    transition: all 1s;
+}
+
+#discord:hover .footer-svg-path {
+    fill: #5865F2;
+}
+
+#github:hover .footer-svg-path {
+    fill: #ffffff;
+}
+
+#footer-text {
+    color: var(--color-body-background);
+    text-decoration: none;
+    padding: 0px 10px;
+    border-radius: 30px;
 }
 
 #footer-h,
@@ -413,7 +451,12 @@ tr.delete2 .delete-button {
     color: var(--color-dnd-red-light);
 }
 
-.link:hover {
+#footer-text:hover {
+    background: var(--color-transparent-dark);
+    transition: all 1s ease;
+}
+
+#footer-text:hover .link {
     color: var(--color-body-background);
     text-decoration: underline;
     transition: all 1s ease;
