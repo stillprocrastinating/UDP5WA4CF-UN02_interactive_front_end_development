@@ -73,6 +73,7 @@ function dieColorOut (dieIndex) {
 /** Ensure the input from d-other is a number */
 function dieOther () {
     let dieType = prompt("Enter the type of die to roll:", "Please input a number");
+    dieType = parseInt(dieType);
     if (dieType == "the type of die to roll") {
         alert(`-_-`);
     } else if (dieType == "a number") {
@@ -92,7 +93,13 @@ function dieOther () {
     } else if (isNaN(dieType) == true) {
         dieOther();
     } else if (isNaN(dieType) == false) {
-        rollDie(dieType);
+        if (Number.isInteger(dieType) == false) {
+            alert(`Please choose an integer / whole number.`);
+            dieOther();
+        }
+        else {
+            rollDie(dieType);
+        }
     };
 }
 
