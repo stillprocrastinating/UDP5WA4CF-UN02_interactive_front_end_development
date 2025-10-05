@@ -426,7 +426,7 @@ div:hover .footer-svg-path {
 
 #discord:hover,
 #github:hover {
-    background: var(--color-transparent-dark);
+    background: #00000099;
     transition: all 1s;
 }
 
