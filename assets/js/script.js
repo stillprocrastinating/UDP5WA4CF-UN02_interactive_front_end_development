@@ -3,18 +3,18 @@ let roll = {
     cumulativeRoll: 0,
     currentRoll: 0,
     dieTypes: ["d2", "d4", "d6", "d8", "d10", "d12", "d20", "d100", "d-other"],
-    previousRolls: [],
-}
+    previousRolls: []
+};
 
 /** object to contain saved rolls */
-let savedRolls = {}
+let savedRolls = {};
 let saveIteration = 0;
 
 /** At DOM load, show content */
 let domContent = document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("header-p").style.display = "block";
     document.getElementById("main").style.display = "block";
-})
+});
 
 
 /* | |   |  |||| ||||| ||||  |   |  |||| ||||| |  |||  |   |  ||||
@@ -28,7 +28,7 @@ function showInstructions () {
     document.getElementById("hide-instructions-button").style.display = "block";
     document.getElementById("show-instructions-button").style.display = "none";
     let dieLabels = document.getElementsByClassName("die-label");
-    for (let i = 0; i < dieLabels.length; i++) {
+    for (i = 0; i < dieLabels.length; i++) {
         dieLabels[i].style.display = "block";
     }
 }
@@ -38,7 +38,7 @@ function hideInstructions () {
     document.getElementById("hide-instructions-button").style.display = "none";
     document.getElementById("instructions").style.display = "none";
     let dieLabels = document.getElementsByClassName("die-label");
-    for (let i = 0; i < dieLabels.length; i++) {
+    for (i = 0; i < dieLabels.length; i++) {
         dieLabels[i].style.display = "none";
     }
 }
@@ -89,9 +89,9 @@ function dieOther () {
         alert(`Oh, okay. My b.\nHave a good day.`);
     } else if (dieType == "NO") {
         alert(`Oh, okay. My b.\nHave a good day.`);
-    } else if (isNaN(dieType) == true) {
+    } else if (Number.isNaN(dieType) == true) {
         dieOther();
-    } else if (isNaN(dieType) == false) {
+    } else if (Number.isNaN(dieType) == false) {
         if (Number.isInteger(dieType) == false) {
             alert(`Please choose an integer / whole number.`);
             dieOther();
@@ -99,13 +99,13 @@ function dieOther () {
         else {
             rollDie(dieType);
         }
-    };
+    }
 }
 
 /** At DOM load, listen for die choice (click) */
 document.addEventListener("DOMContentLoaded", function () {
     let dieButtons = document.getElementsByClassName("die-btn");
-    for (let dieButton of dieButtons) {
+    for (dieButton of dieButtons) {
         dieButton.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "d2") {
                 let dieType = 2;
