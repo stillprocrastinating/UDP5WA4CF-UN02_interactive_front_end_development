@@ -27,6 +27,11 @@ body {
     justify-content: space-between;
 }
 
+#main {
+    padding: 0px 10%;
+    flex-grow: 9;
+}
+
 .hidden {
     visibility: hidden;
 }
@@ -68,14 +73,13 @@ body {
 /* |  || |   |     | |     | |   | |       |
 /* |   |  |||  ||||   |||| |  || | |       |  */
 
+#header-p,
 #main {
     display: none;
-    padding: 0px 10%;
-    flex-grow: 9;
 }
 
-#noscript {
-    width: 80%;
+noscript {
+    width: 100%;
     padding: 5px;
     text-align: center;
     position: fixed;
