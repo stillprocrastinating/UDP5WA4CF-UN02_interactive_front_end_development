@@ -42,10 +42,10 @@
     </p>
     <main id="main">
         <section id="instructions-area">
-            <div id="show-instructions-button" class="header" onclick="showInstructions()">
+            <div id="show-instructions-button" class="header" onclick="showInstructions()" aria-label="Click this button to show the instructions">
                 Show instructions
             </div>
-            <div id="hide-instructions-button" class="header" onclick="hideInstructions()">
+            <div id="hide-instructions-button" class="header" onclick="hideInstructions()" aria-label="Click this button to hide the instructions">
                 Hide instructions
             </div>
             <div id="instructions" class="header-body">
@@ -249,12 +249,12 @@
                     </div>
             </div>
             <div id="action-buttons-area" aria-label="Go here to reset or save the rolls">
-                <div id="save-button" aria-label="Go here to save your set of roll results" onclick="save()">
+                <div id="save-button" aria-label="Click here to save your set of roll results" onclick="save()">
                     <div class="button-h">
                         Save
                     </div>
                 </div>
-                <div id="reset-button" aria-label="Go here to reset the roll results" onclick="reset()">
+                <div id="reset-button" aria-label="Click here to reset the roll results" onclick="reset()">
                     <div class="button-h">
                         Reset
                     </div>
@@ -283,7 +283,7 @@
                     </th>
                     <th id="table-th-delete-button">
                         <div id="delete-heading" class="hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2 delete-button" alt="you can't see this delete button, but neither can anyone else, well done for finding this secret easter egg!">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2 delete-button" alt="you found the secret delete button (it does nothing though)!">
                                 <path d="M10 11v6"/>
                                 <path d="M14 11v6"/>
                                 <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
@@ -315,7 +315,7 @@
                 </svg>
             </div>
         </a>
-        <a href="https://stillprocrastinating.github.io/UDP5WA4CF-UN01_user_centric_front_end_development" target="_blank" title="Go to my website about Dungeons and Dragons stories (opens in a new tab)" id="footer-text">
+        <a href="https://stillprocrastinating.github.io/UDP5WA4CF-UN01_user_centric_front_end_development" target="_blank" aria-label="Click to go to my website about Dungeons and Dragons stories (opens in a new tab)" title="Go to my website about Dungeons and Dragons stories (opens in a new tab)" id="footer-text">
             <p id="footer-h">
                 Like D&D or want to?
             </p>
