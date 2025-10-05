@@ -63,7 +63,8 @@ body {
     color: var(--color-dnd-red-light);
     text-align: center;
     margin: 10px 0px;
-    font-size: 15px;
+    font-size: 15px;color: var(--color-dnd-red-dark);
+    font-weight: bold;
 }
 
 
