@@ -12,6 +12,7 @@ let saveIteration = 0;
 
 /** At DOM load, show content */
 let domContent = document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("header-p").style.display = "block";
     document.getElementById("main").style.display = "block";
 })
 
