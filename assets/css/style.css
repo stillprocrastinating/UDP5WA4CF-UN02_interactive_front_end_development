@@ -8,7 +8,7 @@
 :root {
   --color-body-background: #FEE8C3;
   --color-dnd-red-dark: #CC0000E5;
-  --color-dnd-red-light: #FF5C5CE5;
+  --color-dnd-red-light: #FF7070E5;
   --color-transparent-dark: #00000050;
   --color-header: #454731;
   --color-body: #6F6B49;
@@ -451,7 +451,8 @@ div:hover .footer-svg-path {
 }
 
 .link {
-    color: var(--color-dnd-red-light);
+    color: #000000;
+    font-weight: bold;
 }
 
 #footer-text:hover {
@@ -460,7 +461,7 @@ div:hover .footer-svg-path {
 }
 
 #footer-text:hover .link {
-    color: var(--color-body-background);
+    color: var(--color-dnd-red-light);
     text-decoration: underline;
     transition: all 1s ease;
 }
