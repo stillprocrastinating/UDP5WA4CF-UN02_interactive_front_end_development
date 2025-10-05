@@ -279,7 +279,8 @@ noscript {
     cursor: pointer;
 }
 
-.button-heading {
+.button-h {
+    color: #000000;
     border: 5px solid transparent;
     font-weight: bold;
 }
@@ -295,7 +296,7 @@ noscript {
     filter: hue-rotate(-90deg) invert(100%);
 }
 
-.button-heading:hover {
+.button-h:hover {
     color: var(--color-body-background);
 }
 
