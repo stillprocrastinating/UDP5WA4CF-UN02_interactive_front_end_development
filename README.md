@@ -165,12 +165,17 @@ All fonts were sourced from [Google Fonts](https://fonts.google.com).
 
 ## Bugs
 
->For a (truly) exhaustive list of bugs, please see `README/bugs.md`, [here].  
+>For a (truly) exhaustive list of bugs, please see `README/bugs.md`, [here](https://github.com/stillprocrastinating/UDP5WA4CF-UN02_interactive_front_end_development/blob/main/assets/README/bugs.md).  
 Major bugs are duplicate listed below.
 
 | # | Date IDd | Bug description | Date resolved | Resolution | Commit | Comments |
 |-|-|-|-|-|-|-|
-| x | 2025-
+| 2	| 2025-08-26 | `#previous-rolls` fills with random `roll.dieType`s (expect random number up to and including the `dieType`) | 2025-08-26 | `function rollDie () {let rollRandom = Math.floor(Math.random() * dieType) + 1; roll.previousRolls.push(rollRandom);}` | [main 4cdf303] #previous-rolls functions ||
+| 3 | 2025-08-26 | `#current-roll` does not populate | 2025-08-26 | `function rollDie () {roll.currentRoll = rollRandom;}` | [main 1274f7f] #current-roll functions ||
+| 10 | 2025-09-14 | If `dieOther()` prompt is cancelled, `rollDie()` rolls a 1 (dnull) | 2025-09-14 | `rollDie()` includes `if (dieType === null) {return;}` | [main 30ebe94] dieOther(){cancelled} - functional ||
+| 11 | 2025-09-14 | Custom die rolls with special messaging cause double rolls | 2025-09-16 | The `switch` section of `dieOther()` included `rollDie(dieType);` for relevant `case`s, but the relevant `case`s (aka, the numbers) were already being rolled in `if (isNan(dieType) == false) {rollDie(dieType);}` | [main 123ba04] dieOther(){no double rolls} - functional ||
+| 17 | 2025-09-28 | Deleting saves still affects multiple rows - specifically when deleting a row with a larger index than an already deleted row | 2025-09-28 | Changed `getElementById(row-${rowN})` to `bin.parentNode.parentNode` | [main 3e93626] deleteSave() deletes correct row repeatedly ||
+| 19 | 2025-10-04 | Implementing a check for `isInteger()` doesn't work as I expected | 2025-10-04 | `isInteger()` was sending `false` due to string input | [main 2bc5b87] Update user story 2 | #duh |
 
 
 ### Residual bugs
@@ -304,5 +309,6 @@ For anyone crazy enough to have made it down here, I hope you found the info you
 On a similar note, Raghav, thank you, I really appreciate you :)
 
 [↑ Return to top](https://github.com/stillprocrastinating/UDP5WA4CF-UN02_interactive_front_end_development)
+
 
 
