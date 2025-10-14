@@ -2,7 +2,7 @@
 |-|-|-|-|-|-|-|
 | 1 | 2025-08-13 | `#d100-contents` background does not cover all of `#d100-container` square 'button' area | 2025-08-14 | `#d100-contents{height:80px;}` | [main 1cb5750] Fix #d100-contents background ||
 | 2 | 2025-08-26 | `#previous-rolls` fills with random `roll.dieTypes` (expect random number up to and including the `dieType`) | 2025-08-26 | `function rollDie () {let rollRandom = Math.floor(Math.random() * dieType) + 1; roll.previousRolls.push(rollRandom);}` | [main 4cdf303] #previous-rolls functions ||
-| 3 | 2025-08-26 | `#current-roll` does not populate | 2025-08-26 | `function rollDie () {roll.currentRoll = rollRandom;}` | [main 1274f7f] #previous-rolls{word-wrap: break-word;} ||
+| 3 | 2025-08-26 | `#current-roll` does not populate | 2025-08-26 | `function rollDie () {roll.currentRoll = rollRandom;}` | [main 1274f7f] #current-roll functions ||
 | 4 | 2025-08-26 | `#previous-rolls` text will eventually break out of the device width | 2025-08-26 | `#previous-rolls{word-wrap: break-word;}` | [main 825087d] #previous-rolls{word-wrap: break-word;} ||
 | 5 | 2025-08-30 | `savedRolls.save1` isn't accessible across pages in `saves.html` `#save-roll-1` | 2025-08-31 | `#saves-area` moved into `index.html` (`saves.html` deleted) | [main 51127d2] save(){} - functional ||
 | 6 | 2025-08-31 | `.show-instructions-button` & `.hide-instructions-button` `onclick` functions don't execute | 2025-08-31 | Changed to `#show-instructions-button` & `#show-instructions-button` | [main e13e4c4] hideInstructions(){} - functional | Well, that was embarrassing |
@@ -19,6 +19,9 @@
 | 17 | 2025-09-28 | Deleting saves _still_ affects multiple rows - specifically when deleting a row with a larger index than an already deleted row | 2025-09-28 | Changed `getElementById(row-${rowN})` to `bin.parentNode.parentNode` | [main 3e93626] deleteSave() deletes correct row repeatedly ||
 | 18 | 2025-09-29 | `#footer` is not ideally situated | 2025-10-05 | `body{min-height: 100vh; display: flex;}` `#main{flex-grow: 9;}` | [main dd6ef4d] Footer at bottom of screen on big screens | Aim was to use JS to toggle `.footer-fixed` when body height is smaller than window height, but I can't find appropriate functions |
 | 19 | 2025-10-04 | Implementing a check for isInteger() doesn't work as I expected | 2025-10-04 | isInteger() was sending `false` due to string input | [main 2bc5b87] Update user story 2 | #duh |
+<<<<<<< HEAD
 | 20 | 2025-10-04 | Implementing integer check has broken cancel mechanic., resulting in `NaN(NaN)` output | 2025-10-14 | [Ivar](https://stackoverflow.com/users/479156/ivar) in [this](https://stackoverflow.com/questions/73847813/removeeventlistener-not-working-on-window-object) [Stack Overflow](https://stackoverflow.com) question prompted my understanding of how `"DOMContentLoaded"` works vs the nested event listener | [main 2916d5d] Fixing float bug using custom modal ||
 | 21 | 2025-10-10 | In an attempt to fix bug #20, built custom modal. Either `modal-input` isn't being read or `modal-submit` doesn't function | 2025-10-13 | It was neither! They were being called at the incorrect stage of the function | [main 2916d5d] Fixing float bug using custom modal | `modal-cancel` works though! |
 | 22 | 2025-10-14 | Rolling multiple custom die results in index+1 number of rolls made | 
+=======
+>>>>>>> f7807ea06b2b4cd885e7e979e3d521782ba05862
