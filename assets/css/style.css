@@ -260,7 +260,7 @@ noscript {
 }
 
 
-/* action-buttons-area */
+/* action-buttons-area / modal-buttons */
 
 #action-buttons-area {
     padding: 5px;
@@ -271,7 +271,9 @@ noscript {
 }
 
 #save-button,
-#reset-button {
+#reset-button,
+#modal-submit,
+#modal-cancel {
     background: var(--color-body) url(../images/header/header_background_image.webp) no-repeat 49% 89% / auto;
     border: 1px solid var(--color-header);
     text-align: center;
@@ -285,12 +287,14 @@ noscript {
     font-weight: bold;
 }
 
-#save-button:hover {
+#save-button:hover,
+#modal-submit:hover {
     transition: 1s;
     background: var(--color-header) url(../images/header/header_background_image.webp) no-repeat 83% 100% / auto;
 }
 
-#reset-button:hover {
+#reset-button:hover,
+#modal-cancel:hover {
     transition: 1s;
     background: var(--color-dnd-red-light) url(../images/header/header_background_image.webp) no-repeat 83% 100% / auto;
     filter: hue-rotate(-90deg) invert(100%);
@@ -301,7 +305,9 @@ noscript {
 }
 
 #save-button:active,
-#reset-button:active {
+#reset-button:active,
+#modal-submit:active,
+#modal-cancel:active {
     background-color: var(--color-dnd-red-dark);
 }
 
@@ -392,6 +398,61 @@ tr.delete2 .delete-button {
 .delete-button:active {
     stroke: var(--color-body-link);
 }
+
+
+/* |   |  |||  ||||   |||  |
+/* || || |   | |   | |   | |
+/* | | | |   | |   | ||||| |
+/* |   | |   | |   | |   | |
+/* |   |  |||  ||||  |   | ||||| */
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal-container {
+    background: var(--color-body-background);
+    margin: 15% auto 5%;
+    padding: 20px;
+    border: 1px solid var(--color-body);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#modal-input {
+    background: var(--color-body-light);
+    border: 1px solid var(--color-body);
+    border-radius: 5px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+#modal-input:focus {
+    border: 2px solid var(--color-body);
+}
+
+#modal-submit {
+    margin: 10px;
+}
+
+
+/* customs */
+
+/*#modal-die-69-container {
+    width: 498px;
+    height: 280px;
+    display: none;
+    margin: 5% auto;
+}*/
 
 
 /* |||||  |||   |||  ||||| ||||| ||||

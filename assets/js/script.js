@@ -11,7 +11,7 @@ let savedRolls = {};
 let saveIteration = 0;
 
 /** At DOM load, show content */
-let domContent = document.addEventListener("DOMContentLoaded", function () {
+let domContent = document.addEventListener("DOMContentLoaded", function domShowMain() {
     document.getElementById("header-p").style.display = "block";
     document.getElementById("main").style.display = "block";
 });
@@ -70,15 +70,51 @@ function dieColorOut (dieIndex) {
 }
 
 /** Ensure the input from d-other is a number */
+//function dieOther () {
+//    let dieType = prompt("Enter the type of die to roll:", "Please input a number");
+//    if (Number.isNaN(dieType) === true) {
+//        if (dieType === "the type of die to roll") {
+//            alert(`-_-`);
+//        } else if (dieType === "a number") {
+//            alert(`-_-`);
+//        } else if (dieType === "no") {
+//            alert(`Oh, okay. My b.\nHave a good day.`);
+//        } else if (dieType === "No") {
+//            alert(`Oh, okay. My b.\nHave a good day.`);
+//        } else if (dieType === "NO") {
+//            alert(`Oh, okay. My b.\nHave a good day.`);
+//        } else {
+//            dieOther();
+//        }
+//    } else if (Number.isNaN(dieType) === false) {
+//        //dieType = parseInt(dieType);
+//        if (Number.isInteger(dieType) === false) {
+//            alert(`Please choose an integer / whole number.`);
+//            dieOther();
+//        } else if (Number.isInteger(dieType) === true) {
+//            if (dieType === 69) {
+//                alert(`Nice.`);
+//                rollDie(dieType);
+//            } else if (dieType === 420) {
+//                alert(`Blaze it!`);
+//                rollDie(dieType);
+//            } else {
+//                rollDie(dieType);
+//            }
+//        }
+//    }
+//}
 function dieOther () {
-    let dieType = prompt("Enter the type of die to roll:", "Please input a number");
-    dieType = parseInt(dieType);
+	let dieType = document.getElementById("modal-input").value;
+    //let dieType = prompt(`Enter the type of die to roll:`, `Please input a number`);
+
     if (dieType == "the type of die to roll") {
         alert(`-_-`);
     } else if (dieType == "a number") {
         alert(`-_-`);
     } else if (dieType == "69") {
-        alert(`Nice.`);
+        //document.getElementById("modal-die-69-container").style.display = "block";
+        //setTimeout(function () {document.getElementById("modal-die-69-container").style.display = "none"; hideModal();}, 1600);
         rollDie(dieType);
     } else if (dieType == "420") {
         alert(`Blaze it!`);
@@ -89,21 +125,21 @@ function dieOther () {
         alert(`Oh, okay. My b.\nHave a good day.`);
     } else if (dieType == "NO") {
         alert(`Oh, okay. My b.\nHave a good day.`);
-    } else if (Number.isNaN(dieType) == true) {
+    } else if (isNaN(dieType) == true) {
         dieOther();
-    } else if (Number.isNaN(dieType) == false) {
-        if (Number.isInteger(dieType) == false) {
-            alert(`Please choose an integer / whole number.`);
-            dieOther();
-        }
-        else {
-            rollDie(dieType);
-        }
+    } else if (isNaN(dieType) == false) {
+        dieInt = parseInt(dieType); // something about this statement breaks the prompt() cancel and window refresh mechanics, and eventListener "Enter" and "Escape" mechanics!
+        //rollDie(dieType);
+        rollDie(dieInt);
+    } else {
+        return;
     }
+
+    //hideModal();
 }
 
 /** At DOM load, listen for die choice (click) */
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function domClick() {
     let dieButtons = document.getElementsByClassName("die-btn");
     for (dieButton of dieButtons) {
         dieButton.addEventListener("click", function () {
@@ -132,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let dieType = 100;
                 rollDie(dieType);
             } else if (this.getAttribute("data-type") === "d-other") {
-                dieOther();
+                showModal();
             } else {
                 alert(`Please choose one of the available dice options.`);
             };
@@ -141,37 +177,36 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 /** At DOM load, listen for die choice (keyup) */
-document.addEventListener("DOMContentLoaded", function () {
-    addEventListener("keyup", (event) => {
-        if (event.key == "2") {
-            let dieType = 2;
-            rollDie(dieType);
-        } else if (event.key == "4") {
-            let dieType = 4;
-            rollDie(dieType);
-        } else if (event.key == "6") {
-            let dieType = 6;
-            rollDie(dieType);
-        } else if (event.key == "8") {
-            let dieType = 8;
-            rollDie(dieType);
-        } else if (event.key == "0") {
-            let dieType = 10;
-            rollDie(dieType);
-        } else if (event.key == "d") {
-            let dieType = 12;
-            rollDie(dieType);
-        } else if (event.key == "t") {
-            let dieType = 20;
-            rollDie(dieType);
-        } else if (event.key == "h") {
-            let dieType = 100;
-            rollDie(dieType);
-        } else if (event.key == "o") {
-            dieOther();
-        };
-    });
-})
+document.addEventListener("DOMContentLoaded", domKeyup);
+let domKeyup = document.addEventListener("keyup", (event) => {
+    if (event.key == "2") {
+        let dieType = 2;
+        rollDie(dieType);
+    } else if (event.key == "4") {
+        let dieType = 4;
+        rollDie(dieType);
+    } else if (event.key == "6") {
+        let dieType = 6;
+        rollDie(dieType);
+    } else if (event.key == "8") {
+        let dieType = 8;
+        rollDie(dieType);
+    } else if (event.key == "0") {
+        let dieType = 10;
+        rollDie(dieType);
+    } else if (event.key == "d") {
+        let dieType = 12;
+        rollDie(dieType);
+    } else if (event.key == "t") {
+        let dieType = 20;
+        rollDie(dieType);
+    } else if (event.key == "h") {
+        let dieType = 100;
+        rollDie(dieType);
+    } else if (event.key == "o") {
+        showModal();
+    };
+});
 
 /** starts a new roll set */
 function reset () {
@@ -185,7 +220,7 @@ function reset () {
 
 /** rolls the type of die click/keydown */
 function rollDie (dieType) {
-    if (dieType === null) {
+    if (dieType == NaN) {
         return;
     } else {
         let rollRandom = Math.floor(Math.random() * dieType) + 1;
@@ -196,6 +231,32 @@ function rollDie (dieType) {
 
         showRolls();
     }
+}
+
+/** displays the dieOther() modal */
+function showModal () {
+    let modal = document.getElementById("modal");
+    modal.style.display = "block";
+
+    document.getElementById("modal-input").focus();
+
+    modal.addEventListener("keyup", (event) => {
+        if (event.key == "Enter") {
+            dieOther();
+        } else if (event.key == "Escape") {
+            hideModal();
+        }
+    })
+
+    domKeyup = null;
+}
+
+/** hides the dieOther() modal */
+function hideModal () {
+    let modal = document.getElementById("modal");
+    modal.style.display = "none";
+
+	document.getElementById("modal-input").value = "";
 }
 
 /** displays the relevent rolls in the HTML */
