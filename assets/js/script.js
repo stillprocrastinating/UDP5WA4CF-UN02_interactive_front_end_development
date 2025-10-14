@@ -113,8 +113,8 @@ function dieOther () {
     } else if (dieType == "a number") {
         alert(`-_-`);
     } else if (dieType == "69") {
-        //document.getElementById("modal-die-69-container").style.display = "block";
-        //setTimeout(function () {document.getElementById("modal-die-69-container").style.display = "none"; hideModal();}, 1600);
+        document.getElementById("modal-die-69-container").style.display = "block";
+        setTimeout(function () {document.getElementById("modal-die-69-container").style.display = "none"; hideModal();}, 1600);
         rollDie(dieType);
     } else if (dieType == "420") {
         alert(`Blaze it!`);
