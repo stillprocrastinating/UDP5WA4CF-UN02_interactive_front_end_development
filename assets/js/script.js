@@ -240,6 +240,8 @@ function showModal () {
 
     document.getElementById("modal-input").focus();
 
+    domKeyup = null;
+
     modal.addEventListener("keyup", (event) => {
         if (event.key == "Enter") {
             dieOther();
@@ -247,8 +249,6 @@ function showModal () {
             hideModal();
         }
     })
-
-    domKeyup = null;
 }
 
 /** hides the dieOther() modal */
