@@ -119,11 +119,11 @@ function dieOther () {
         modalDie420();
         rollDie(dieType);
     } else if (dieType == "no") {
-        alert(`Oh, okay. My b.\nHave a good day.`);
+        modalDieNo();
     } else if (dieType == "No") {
-        alert(`Oh, okay. My b.\nHave a good day.`);
+        modalDieNo();
     } else if (dieType == "NO") {
-        alert(`Oh, okay. My b.\nHave a good day.`);
+        modalDieNo();
     } else if (isNaN(dieType) == true) {
         dieOther();
     } else if (isNaN(dieType) == false) {
@@ -131,10 +131,9 @@ function dieOther () {
         rollDie(dieInt);
         hideModal();
     } else {
+        hideModal();
         return;
     }
-
-    //hideModal();
 }
 
 /** At DOM load, listen for die choice (click) */
@@ -275,6 +274,15 @@ function modalDieLiteral () {
         document.getElementById("modal-die-literal-container").style.display = "none";
         hideModal();
     }, 7500);
+}
+
+/** shows the modal-die-no gif */
+function modalDieNo () {
+    document.getElementById("modal-die-no-container").style.display = "block";
+    setTimeout(function () {
+        document.getElementById("modal-die-no-container").style.display = "none";
+        hideModal();
+    }, 1300);
 }
 
 /** displays the dieOther() modal */
