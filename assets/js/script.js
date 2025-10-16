@@ -116,7 +116,7 @@ function dieOther () {
         modalDie69();
         rollDie(dieType);
     } else if (dieType == "420") {
-        alert(`Blaze it!`);
+        modalDie420();
         rollDie(dieType);
     } else if (dieType == "no") {
         alert(`Oh, okay. My b.\nHave a good day.`);
@@ -257,6 +257,15 @@ function modalDie69 () {
         document.getElementById("modal-die-69-container").style.display = "none";
         hideModal();
     }, 1600);
+}
+
+/** shows the modal-die-420 gif */
+function modalDie420 () {
+    document.getElementById("modal-die-420-container").style.display = "block";
+    setTimeout(function () {
+        document.getElementById("modal-die-420-container").style.display = "none";
+        hideModal();
+    }, 2300);
 }
 
 /** displays the dieOther() modal */

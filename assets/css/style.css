@@ -454,6 +454,13 @@ tr.delete2 .delete-button {
     margin: 5% auto;
 }
 
+#modal-die-420-container {
+    max-width: 290px;
+    max-height: 290px;
+    display: none;
+    margin: 5% auto;
+}
+
 
 /* |||||  |||   |||  ||||| ||||| ||||
 /* |     |   | |   |   |   |     |   |
