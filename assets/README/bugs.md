@@ -23,3 +23,4 @@
 | 21 | 2025-10-10 | In an attempt to fix bug #20, built custom modal. Either `modal-input` isn't being read or `modal-submit` doesn't function | 2025-10-13 | It was neither! They were being called at the incorrect stage of the function | [main 2916d5d] Fixing float bug using custom modal | `modal-cancel` works though! |
 | 22 | 2025-10-14 | Rolling multiple custom die results in index+1 number of rolls made | 
 | 23 | 2025-10-15 | `Enter` & `Escape` no longer submit modal | 2025-10-16 | The `showModal()` tidy I did made the event listeners stop functioning | [main c441d86] Shouldn't've tidied c46bce8 - Enter & Escape function again | Should've checked that! |
+| 24 | 2025-10-16 | `#modal-die-69-container` too large for phone screens | 2025-10-16 | Changed `width` & `height` to `max-width` & `max-height`

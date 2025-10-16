@@ -448,8 +448,8 @@ tr.delete2 .delete-button {
 /* customs */
 
 #modal-die-69-container {
-    width: 498px;
-    height: 280px;
+    max-width: 498px;
+    max-height: 280px;
     display: none;
     margin: 5% auto;
 }
