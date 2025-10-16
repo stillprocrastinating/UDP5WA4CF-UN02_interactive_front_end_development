@@ -109,9 +109,9 @@ function dieOther () {
     //let dieType = prompt(`Enter the type of die to roll:`, `Please input a number`);
 
     if (dieType == "the type of die to roll") {
-        alert(`-_-`);
+        modalDieLiteral();
     } else if (dieType == "a number") {
-        alert(`-_-`);
+        modalDieLiteral();
     } else if (dieType == "69") {
         modalDie69();
         rollDie(dieType);
@@ -266,6 +266,15 @@ function modalDie420 () {
         document.getElementById("modal-die-420-container").style.display = "none";
         hideModal();
     }, 2300);
+}
+
+/** shows the modal-die-literal gif */
+function modalDieLiteral () {
+    document.getElementById("modal-die-literal-container").style.display = "block";
+    setTimeout(function () {
+        document.getElementById("modal-die-literal-container").style.display = "none";
+        hideModal();
+    }, 7500);
 }
 
 /** displays the dieOther() modal */
