@@ -128,9 +128,9 @@ function dieOther () {
     } else if (isNaN(dieType) == true) {
         dieOther();
     } else if (isNaN(dieType) == false) {
-        dieInt = parseInt(dieType); // something about this statement breaks the prompt() cancel and window refresh mechanics, and eventListener "Enter" and "Escape" mechanics!
-        //rollDie(dieType);
+        dieInt = parseInt(dieType);
         rollDie(dieInt);
+        hideModal();
     } else {
         return;
     }
