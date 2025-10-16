@@ -113,8 +113,7 @@ function dieOther () {
     } else if (dieType == "a number") {
         alert(`-_-`);
     } else if (dieType == "69") {
-        document.getElementById("modal-die-69-container").style.display = "block";
-        setTimeout(function () {document.getElementById("modal-die-69-container").style.display = "none"; hideModal();}, 1600);
+        modalDie69();
         rollDie(dieType);
     } else if (dieType == "420") {
         alert(`Blaze it!`);
@@ -233,6 +232,33 @@ function rollDie (dieType) {
     }
 }
 
+/** displays the relevent rolls in the HTML */
+function showRolls () {
+	document.getElementById("current-roll").textContent = roll.currentRoll;
+	document.getElementById("cumulative-roll").textContent = roll.cumulativeRoll;
+	document.getElementById("previous-rolls").textContent = roll.previousRolls;
+}
+
+
+// Modal
+
+/** hides the dieOther() modal */
+function hideModal () {
+    let modal = document.getElementById("modal");
+    modal.style.display = "none";
+
+	document.getElementById("modal-input").value = "";
+}
+
+/** shows the modal-die-69 gif */
+function modalDie69 () {
+    document.getElementById("modal-die-69-container").style.display = "block";
+    setTimeout(function () {
+        document.getElementById("modal-die-69-container").style.display = "none";
+        hideModal();
+    }, 1600);
+}
+
 /** displays the dieOther() modal */
 function showModal () {
     let modal = document.getElementById("modal");
@@ -249,21 +275,6 @@ function showModal () {
     })
 
     domKeyup = null;
-}
-
-/** hides the dieOther() modal */
-function hideModal () {
-    let modal = document.getElementById("modal");
-    modal.style.display = "none";
-
-	document.getElementById("modal-input").value = "";
-}
-
-/** displays the relevent rolls in the HTML */
-function showRolls () {
-	document.getElementById("current-roll").textContent = roll.currentRoll;
-	document.getElementById("cumulative-roll").textContent = roll.cumulativeRoll;
-	document.getElementById("previous-rolls").textContent = roll.previousRolls;
 }
 
 
