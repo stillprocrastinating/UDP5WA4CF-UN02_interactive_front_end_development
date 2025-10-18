@@ -203,6 +203,10 @@ function domKeyup () {
             rollDie(dieType);
         } else if (event.key == "o") {
             showModal();
+        } else if (event.key == "i" && document.getElementById("instructions").style.display == "" || event.key == "i" && document.getElementById("instructions").style.display == "none") {
+            showInstructions();
+        } else if (event.key == "i" && document.getElementById("instructions").style.display == "block") {
+            hideInstructions();
         }
     })
 }
