@@ -107,9 +107,7 @@ function dieColorOut (dieIndex) {
 function dieOther () {
 	let dieType = document.getElementById("modal-input").value;
 
-    if (dieType == "the type of die to roll") {
-        modalDieLiteral();
-    } else if (dieType == "a number") {
+    if (dieType == "the type of die to roll" || dieType == "a number") {
         modalDieLiteral();
     } else if (dieType == "69") {
         modalDie69();
@@ -117,11 +115,7 @@ function dieOther () {
     } else if (dieType == "420") {
         modalDie420();
         rollDie(dieType);
-    } else if (dieType == "no") {
-        modalDieNo();
-    } else if (dieType == "No") {
-        modalDieNo();
-    } else if (dieType == "NO") {
+    } else if (dieType == "no" || dieType == "No" || dieType == "NO") {
         modalDieNo();
     } else if (isNaN(dieType) == true) {
         dieOther();
