@@ -106,7 +106,6 @@ function dieColorOut (dieIndex) {
 //}
 function dieOther () {
 	let dieType = document.getElementById("modal-input").value;
-    //let dieType = prompt(`Enter the type of die to roll:`, `Please input a number`);
 
     if (dieType == "the type of die to roll") {
         modalDieLiteral();
@@ -176,35 +175,37 @@ document.addEventListener("DOMContentLoaded", function domClick() {
 
 /** At DOM load, listen for die choice (keyup) */
 document.addEventListener("DOMContentLoaded", domKeyup);
-let domKeyup = document.addEventListener("keyup", (event) => {
-    if (event.key == "2") {
-        let dieType = 2;
-        rollDie(dieType);
-    } else if (event.key == "4") {
-        let dieType = 4;
-        rollDie(dieType);
-    } else if (event.key == "6") {
-        let dieType = 6;
-        rollDie(dieType);
-    } else if (event.key == "8") {
-        let dieType = 8;
-        rollDie(dieType);
-    } else if (event.key == "0") {
-        let dieType = 10;
-        rollDie(dieType);
-    } else if (event.key == "d") {
-        let dieType = 12;
-        rollDie(dieType);
-    } else if (event.key == "t") {
-        let dieType = 20;
-        rollDie(dieType);
-    } else if (event.key == "h") {
-        let dieType = 100;
-        rollDie(dieType);
-    } else if (event.key == "o") {
-        showModal();
-    };
-});
+function domKeyup () {
+    document.addEventListener("keyup", (event) => {
+        if (event.key == "2") {
+            let dieType = 2;
+            rollDie(dieType);
+        } else if (event.key == "4") {
+            let dieType = 4;
+            rollDie(dieType);
+        } else if (event.key == "6") {
+            let dieType = 6;
+            rollDie(dieType);
+        } else if (event.key == "8") {
+            let dieType = 8;
+            rollDie(dieType);
+        } else if (event.key == "0") {
+            let dieType = 10;
+            rollDie(dieType);
+        } else if (event.key == "d") {
+            let dieType = 12;
+            rollDie(dieType);
+        } else if (event.key == "t") {
+            let dieType = 20;
+            rollDie(dieType);
+        } else if (event.key == "h") {
+            let dieType = 100;
+            rollDie(dieType);
+        } else if (event.key == "o") {
+            showModal();
+        }
+    })
+}
 
 /** starts a new roll set */
 function reset () {

@@ -24,3 +24,4 @@
 | 22 | 2025-10-14 | Rolling multiple custom die results in index+1 number of rolls made | 
 | 23 | 2025-10-15 | `Enter` & `Escape` no longer submit modal | 2025-10-16 | The `showModal()` tidy I did made the event listeners stop functioning | [main c441d86] Shouldn't've tidied c46bce8 - Enter & Escape function again | Should've checked that! |
 | 24 | 2025-10-16 | `#modal-die-69-container` too large for phone screens | 2025-10-16 | Changed `width` & `height` to `max-width` & `max-height` | [main f8c0600] #modal-die-69-container tidy & phone compatibility ||
+| 25 | 2025-10-16 | `domKeyup` event listener no longer functional | 2025-10-18 | `domKeyup` needed to be a function 
