@@ -495,6 +495,7 @@ tr.delete2 .delete-button {
     width: 60px;
     border-radius: 30px;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 .footer-svg-path {
@@ -525,6 +526,7 @@ div:hover .footer-svg-path {
     text-decoration: none;
     padding: 0px 10px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 #footer-h,
