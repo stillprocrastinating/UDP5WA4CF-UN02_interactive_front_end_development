@@ -41,10 +41,10 @@
     </p>
     <main id="main">
         <section id="instructions-area">
-            <div id="show-instructions-button" class="header" onclick="showInstructions()" aria-label="Click this button to show the instructions">
+            <div id="show-instructions-button" class="header" onclick="showInstructions()" aria-label="Click this button to show the instructions" title="keyboard shortcut: i">
                 Show instructions
             </div>
-            <div id="hide-instructions-button" class="header" onclick="hideInstructions()" aria-label="Click this button to hide the instructions">
+            <div id="hide-instructions-button" class="header" onclick="hideInstructions()" aria-label="Click this button to hide the instructions" title="keyboard shortcut: i">
                 Hide instructions
             </div>
             <div id="instructions" class="header-body">
@@ -111,7 +111,7 @@
         </section>
         <section id="roll-area" aria-label="Go here to roll dice">
             <div id="die-buttons-area" aria-label="Go here again to roll dice">
-                <div class="die die-btn d2" data-type="d2" title="d2 / coin" aria-label="Roll a d2 / coin" onmouseenter="dieColor(0)" onmouseleave="dieColorOut(0)">
+                <div class="die die-btn d2" data-type="d2" title="d2 / coin . keyboard shortcut: 2" aria-label="Roll a d2 / coin" onmouseenter="dieColor(0)" onmouseleave="dieColorOut(0)">
                     <p class="die-label">
                         d2
                     </p>
@@ -122,7 +122,7 @@
                         </g>
                     </svg> <!-- <img src="assets/images/die-buttons-area/d2.svg"> -->
                 </div>
-                <div class="die die-btn d4" data-type="d4" title="d4" aria-label="Roll a d4" onmouseenter="dieColor(1)" onmouseleave="dieColorOut(1)">
+                <div class="die die-btn d4" data-type="d4" title="d4 . keyboard shortcut: 4" aria-label="Roll a d4" onmouseenter="dieColor(1)" onmouseleave="dieColorOut(1)">
                     <p class="die-label">
                         d4
                     </p>
@@ -133,7 +133,7 @@
                         </g>
                     </svg> <!-- <img src="assets/images/die-buttons-area/d4.svg"> -->
                 </div>
-                <div class="die die-btn d6" data-type="d6" title="d6 / regular dice" aria-label="Roll a d6 / regular dice" onmouseenter="dieColor(2)" onmouseleave="dieColorOut(2)">
+                <div class="die die-btn d6" data-type="d6" title="d6 / regular dice . keyboard shortcut: 6" aria-label="Roll a d6 / regular dice" onmouseenter="dieColor(2)" onmouseleave="dieColorOut(2)">
                     <p class="die-label">
                         d6
                     </p>
@@ -144,7 +144,7 @@
                         </g>
                     </svg> <!-- <img src="assets/images/die-buttons-area/d6.svg"> -->
                 </div>
-                <div class="die die-btn d8" data-type="d8" title="d8" aria-label="Roll a d8" onmouseenter="dieColor(3)" onmouseleave="dieColorOut(3)">
+                <div class="die die-btn d8" data-type="d8" title="d8 . keyboard shortcut: 8" aria-label="Roll a d8" onmouseenter="dieColor(3)" onmouseleave="dieColorOut(3)">
                     <p class="die-label">
                         d8
                     </p>
@@ -155,7 +155,7 @@
                         </g>
                     </svg> <!-- <img src="assets/images/die-buttons-area/d8.svg"> -->
                 </div>
-                <div class="die die-btn d10" data-type="d10" title="d10" aria-label="Roll a d10" alt="a 10-sided die" onmouseenter="dieColor(4)" onmouseleave="dieColorOut(4)">
+                <div class="die die-btn d10" data-type="d10" title="d10 . keyboard shortcut: 0" aria-label="Roll a d10" alt="a 10-sided die" onmouseenter="dieColor(4)" onmouseleave="dieColorOut(4)">
                     <p class="die-label">
                         d10
                     </p>
@@ -166,7 +166,7 @@
                         </g>
                     </svg> <!-- <img src="assets/images/die-buttons-area/d10.svg"> -->
                 </div>
-                <div class="die die-btn d12" data-type="d12" title="d12" aria-label="Roll a d12" onmouseenter="dieColor(5)" onmouseleave="dieColorOut(5)">
+                <div class="die die-btn d12" data-type="d12" title="d12 . keyboard shortcut: d" aria-label="Roll a d12" onmouseenter="dieColor(5)" onmouseleave="dieColorOut(5)">
                     <p class="die-label">
                         d12
                     </p>
@@ -177,7 +177,7 @@
                         </g>
                     </svg> <!-- <img src="assets/images/die-buttons-area/d12.svg"> -->
                 </div>
-                <div class="die die-btn d20" data-type="d20" title="d20" aria-label="Roll a d20" onmouseenter="dieColor(6)" onmouseleave="dieColorOut(6)">
+                <div class="die die-btn d20" data-type="d20" title="d20 . keyboard shortcut: t" aria-label="Roll a d20" onmouseenter="dieColor(6)" onmouseleave="dieColorOut(6)">
                     <p class="die-label">
                         d20
                     </p>
@@ -188,7 +188,7 @@
                         </g>
                     </svg> <!-- <img src="assets/images/die-buttons-area/d20.svg"> -->
                 </div>
-                <div id="d100-container" class="die die-btn" data-type="d100" title="d100" aria-label="Roll a d100" onmouseenter="dieColor(7)" onmouseleave="dieColorOut(7)">
+                <div id="d100-container" class="die die-btn" data-type="d100" title="d100 . keyboard shortcut: h" aria-label="Roll a d100" onmouseenter="dieColor(7)" onmouseleave="dieColorOut(7)">
                     <p class="die-label">
                         d100
                     </p>
@@ -207,7 +207,7 @@
                         </svg> <!-- <img src="assets/images/die-buttons-area/d10(180).svg"> -->
                     </div>
                 </div>
-                <div class="die die-other die-btn d-other" data-type="d-other" title="Input a number to roll using" aria-label="Roll a different die" onmouseenter="dieColor(8)" onmouseleave="dieColorOut(8)">
+                <div class="die die-other die-btn d-other" data-type="d-other" title="Input a number to roll using . keyboard shortcut: o" aria-label="Roll a different die" onmouseenter="dieColor(8)" onmouseleave="dieColorOut(8)">
                     <p class="die-label">
                         custom die
                     </p>
@@ -248,12 +248,12 @@
                     </div>
             </div>
             <div id="action-buttons-area" aria-label="Go here to reset or save the rolls">
-                <div id="save-button" aria-label="Click here to save your set of roll results" onclick="save()">
+                <div id="save-button" aria-label="Click here to save your set of roll results" title="keyboard shortcut: s" onclick="save()">
                     <div class="button-h">
                         Save
                     </div>
                 </div>
-                <div id="reset-button" aria-label="Click here to reset the roll results" onclick="reset()">
+                <div id="reset-button" aria-label="Click here to reset the roll results" title="keyboard shortcut: r" onclick="reset()">
                     <div class="button-h">
                         Reset
                     </div>
