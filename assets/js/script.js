@@ -353,11 +353,15 @@ function save () {
 }
 
 
-/* ||||| ||||| ||||| |||||
-/*   |   |     |       |
-/*   |   ||||  |||||   |
-/*   |   |         |   |
-/*   |   ||||| |||||   | */
+/*    /   |||     /
+/*   /   |   |   /
+/*  / |  |   |  / |
+/* ||||| |   | |||||
+/*    |   |||     | */
 
-/** link to script.test.js */
-//module.exports = { roll, savedRolls, domLoad, rollDie };
+/** At DOM load, show content */
+document.addEventListener("DOMContentLoaded", domContent404);
+function domContent404() {
+    document.getElementById("main404").style.display = "block";
+    setTimeout(function () {window.location.replace('https://stillprocrastinating.github.io/UDP5WA4CF-UN02_interactive_front_end_development')}, 3000);
+}

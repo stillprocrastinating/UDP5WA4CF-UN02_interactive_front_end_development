@@ -79,7 +79,8 @@ body {
     display: none;
 }
 
-noscript {
+noscript,
+#main404 {
     width: 100%;
     padding: 5px;
     text-align: center;
@@ -262,7 +263,8 @@ noscript {
 
 /* action-buttons-area / modal-buttons */
 
-#action-buttons-area {
+#action-buttons-area,
+#teleport-button-container {
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -273,7 +275,8 @@ noscript {
 #save-button,
 #reset-button,
 #modal-submit,
-#modal-cancel {
+#modal-cancel,
+#teleport-to-homepage {
     background: var(--color-body) url(../images/header/header_background_image.webp) no-repeat 49% 89% / auto;
     border: 1px solid var(--color-header);
     text-align: center;
@@ -288,7 +291,8 @@ noscript {
 }
 
 #save-button:hover,
-#modal-submit:hover {
+#modal-submit:hover,
+#teleport-to-homepage:hover {
     transition: 1s;
     background: var(--color-header) url(../images/header/header_background_image.webp) no-repeat 83% 100% / auto;
 }
@@ -307,7 +311,8 @@ noscript {
 #save-button:active,
 #reset-button:active,
 #modal-submit:active,
-#modal-cancel:active {
+#modal-cancel:active,
+#teleport-to-homepage:active {
     background-color: var(--color-dnd-red-dark);
 }
 
@@ -548,6 +553,17 @@ div:hover .footer-svg-path {
     color: var(--color-dnd-red-light);
     text-decoration: underline;
     transition: all 1s ease;
+}
+
+
+/*    /   |||     /
+/*   /   |   |   /
+/*  / |  |   |  / |
+/* ||||| |   | |||||
+/*    |   |||     | */
+
+#teleport-to-homepage {
+    text-decoration: none;
 }
 
 
