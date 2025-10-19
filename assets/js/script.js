@@ -200,6 +200,10 @@ function domKeyup () {
                 showInstructions();
             } else if (event.key == "i" && document.getElementById("instructions").style.display == "block") {
                 hideInstructions();
+            } else if (event.key == "s") {
+                save();
+            } else if (event.key == "r") {
+                reset();
             }
         } else if (document.getElementById("modal").style.display == "block") {
             if (event.key == "Enter") {
