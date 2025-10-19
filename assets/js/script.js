@@ -11,7 +11,7 @@ let savedRolls = {};
 let saveIteration = 0;
 
 /** At DOM load, show content */
-let domContent = document.addEventListener("DOMContentLoaded", function domShowMain() {
+document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("header-p").style.display = "block";
     document.getElementById("main").style.display = "block";
 });
@@ -70,40 +70,6 @@ function dieColorOut (dieIndex) {
 }
 
 /** Ensure the input from d-other is a number */
-//function dieOther () {
-//    let dieType = prompt("Enter the type of die to roll:", "Please input a number");
-//    if (Number.isNaN(dieType) === true) {
-//        if (dieType === "the type of die to roll") {
-//            alert(`-_-`);
-//        } else if (dieType === "a number") {
-//            alert(`-_-`);
-//        } else if (dieType === "no") {
-//            alert(`Oh, okay. My b.\nHave a good day.`);
-//        } else if (dieType === "No") {
-//            alert(`Oh, okay. My b.\nHave a good day.`);
-//        } else if (dieType === "NO") {
-//            alert(`Oh, okay. My b.\nHave a good day.`);
-//        } else {
-//            dieOther();
-//        }
-//    } else if (Number.isNaN(dieType) === false) {
-//        //dieType = parseInt(dieType);
-//        if (Number.isInteger(dieType) === false) {
-//            alert(`Please choose an integer / whole number.`);
-//            dieOther();
-//        } else if (Number.isInteger(dieType) === true) {
-//            if (dieType === 69) {
-//                alert(`Nice.`);
-//                rollDie(dieType);
-//            } else if (dieType === 420) {
-//                alert(`Blaze it!`);
-//                rollDie(dieType);
-//            } else {
-//                rollDie(dieType);
-//            }
-//        }
-//    }
-//}
 function dieOther () {
 	let dieType = document.getElementById("modal-input").value;
 
@@ -128,7 +94,7 @@ function dieOther () {
 }
 
 /** At DOM load, listen for die choice (click) */
-document.addEventListener("DOMContentLoaded", function domClick() {
+document.addEventListener("DOMContentLoaded", function () {
     let dieButtons = document.getElementsByClassName("die-btn");
     for (dieButton of dieButtons) {
         dieButton.addEventListener("click", function () {
@@ -166,8 +132,7 @@ document.addEventListener("DOMContentLoaded", function domClick() {
 })
 
 /** At DOM load, listen for die choice (keyup) */
-document.addEventListener("DOMContentLoaded", domKeyup);
-function domKeyup () {
+document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("keyup", (event) => {
         if (document.getElementById("modal").style.display == "" || document.getElementById("modal").style.display == "none") {
             if (event.key == "2") {
@@ -213,7 +178,7 @@ function domKeyup () {
             }
         }
     })
-}
+})
 
 /** starts a new roll set */
 function reset () {
@@ -248,7 +213,11 @@ function showRolls () {
 }
 
 
-// Modal
+/* |   |  |||  ||||   |||  |
+/* || || |   | |   | |   | |
+/* | | | |   | |   | ||||| |
+/* |   | |   | |   | |   | |
+/* |   |  |||  ||||  |   | ||||| */
 
 /** hides the dieOther() modal */
 function hideModal () {
@@ -313,8 +282,12 @@ function showModal () {
 function deleteSave (bin) {
     let row = bin.parentNode.parentNode;
     row.classList.toggle("delete1")
-    setTimeout(function () {row.classList.toggle("delete2")}, 1000);
-    setTimeout(function () {document.getElementById("save-table").deleteRow(row.rowIndex)}, 3000);
+    setTimeout(function () {
+        row.classList.toggle("delete2");
+    }, 1000);
+    setTimeout(function () {
+        document.getElementById("save-table").deleteRow(row.rowIndex);
+    }, 3000);
 }
 
 /** renames the specified save slot */
@@ -347,7 +320,9 @@ function save () {
     let newRowDelete = newRow.insertCell(4);
     newRowDelete.innerHTML = deleteButton;
     
-    setTimeout(function () {newRow.classList.toggle("active")}, 5000);
+    setTimeout(function () {
+        newRow.classList.toggle("active");
+    }, 5000);
 
     deleteSave();
 }
@@ -360,8 +335,9 @@ function save () {
 /*    |   |||     | */
 
 /** At DOM load, show content */
-document.addEventListener("DOMContentLoaded", domContent404);
-function domContent404() {
+document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("main404").style.display = "block";
-    setTimeout(function () {window.location.replace('https://stillprocrastinating.github.io/UDP5WA4CF-UN02_interactive_front_end_development')}, 3000);
-}
+    setTimeout(function () {
+        window.location.replace('https://stillprocrastinating.github.io/UDP5WA4CF-UN02_interactive_front_end_development');
+    }, 3000);
+})
