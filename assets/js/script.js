@@ -117,8 +117,6 @@ function dieOther () {
         rollDie(dieType);
     } else if (dieType == "no" || dieType == "No" || dieType == "NO") {
         modalDieNo();
-    } else if (isNaN(dieType) == true) {
-        dieOther();
     } else if (isNaN(dieType) == false) {
         dieInt = parseInt(dieType);
         rollDie(dieInt);
@@ -171,36 +169,44 @@ document.addEventListener("DOMContentLoaded", function domClick() {
 document.addEventListener("DOMContentLoaded", domKeyup);
 function domKeyup () {
     document.addEventListener("keyup", (event) => {
-        if (event.key == "2") {
-            let dieType = 2;
-            rollDie(dieType);
-        } else if (event.key == "4") {
-            let dieType = 4;
-            rollDie(dieType);
-        } else if (event.key == "6") {
-            let dieType = 6;
-            rollDie(dieType);
-        } else if (event.key == "8") {
-            let dieType = 8;
-            rollDie(dieType);
-        } else if (event.key == "0") {
-            let dieType = 10;
-            rollDie(dieType);
-        } else if (event.key == "d") {
-            let dieType = 12;
-            rollDie(dieType);
-        } else if (event.key == "t") {
-            let dieType = 20;
-            rollDie(dieType);
-        } else if (event.key == "h") {
-            let dieType = 100;
-            rollDie(dieType);
-        } else if (event.key == "o") {
-            showModal();
-        } else if (event.key == "i" && document.getElementById("instructions").style.display == "" || event.key == "i" && document.getElementById("instructions").style.display == "none") {
-            showInstructions();
-        } else if (event.key == "i" && document.getElementById("instructions").style.display == "block") {
-            hideInstructions();
+        if (document.getElementById("modal").style.display == "" || document.getElementById("modal").style.display == "none") {
+            if (event.key == "2") {
+                let dieType = 2;
+                rollDie(dieType);
+            } else if (event.key == "4") {
+                let dieType = 4;
+                rollDie(dieType);
+            } else if (event.key == "6") {
+                let dieType = 6;
+                rollDie(dieType);
+            } else if (event.key == "8") {
+                let dieType = 8;
+                rollDie(dieType);
+            } else if (event.key == "0") {
+                let dieType = 10;
+                rollDie(dieType);
+            } else if (event.key == "d") {
+                let dieType = 12;
+                rollDie(dieType);
+            } else if (event.key == "t") {
+                let dieType = 20;
+                rollDie(dieType);
+            } else if (event.key == "h") {
+                let dieType = 100;
+                rollDie(dieType);
+            } else if (event.key == "o") {
+                showModal();
+            } else if (event.key == "i" && document.getElementById("instructions").style.display == "" || event.key == "i" && document.getElementById("instructions").style.display == "none") {
+                showInstructions();
+            } else if (event.key == "i" && document.getElementById("instructions").style.display == "block") {
+                hideInstructions();
+            }
+        } else if (document.getElementById("modal").style.display == "block") {
+            if (event.key == "Enter") {
+                dieOther();
+            } else if (event.key == "Escape") {
+                hideModal();
+            }
         }
     })
 }
@@ -290,16 +296,6 @@ function showModal () {
     modal.style.display = "block";
 
     document.getElementById("modal-input").focus();
-
-    modal.addEventListener("keyup", (event) => {
-        if (event.key == "Enter") {
-            dieOther();
-        } else if (event.key == "Escape") {
-            hideModal();
-        }
-    })
-
-    domKeyup = null;
 }
 
 
