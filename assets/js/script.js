@@ -83,7 +83,7 @@ function dieOther () {
         rollDie(dieType);
     } else if (dieType == "no" || dieType == "No" || dieType == "NO") {
         modalDieNo();
-    } else if (isNaN(dieType) == false) {
+    } else if (Number.isNaN(dieType) == false) {
         dieInt = parseInt(dieType);
         rollDie(dieInt);
         hideModal();
