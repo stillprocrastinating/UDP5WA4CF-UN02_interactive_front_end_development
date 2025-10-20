@@ -338,6 +338,6 @@ function save () {
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("main404").style.display = "block";
     setTimeout(function () {
-        window.location.replace('https://stillprocrastinating.github.io/UDP5WA4CF-UN02_interactive_front_end_development');
+        window.location.replace("https://stillprocrastinating.github.io/UDP5WA4CF-UN02_interactive_front_end_development");
     }, 3000);
 })
