@@ -71,7 +71,7 @@ function dieColorOut (dieIndex) {
 
 /** Ensure the input from d-other is a number */
 function dieOther () {
-	let dieType = document.getElementById("modal-input").value;
+    let dieType = document.getElementById("modal-input").value;
 
     if (dieType == "the type of die to roll" || dieType == "a number") {
         modalDieLiteral();
@@ -186,8 +186,8 @@ function reset () {
     roll.previousRolls = [];
 
     document.getElementById("current-roll").textContent = `-`;
-	document.getElementById("cumulative-roll").textContent = `-`;
-	document.getElementById("previous-rolls").textContent = `-`;
+    document.getElementById("cumulative-roll").textContent = `-`;
+    document.getElementById("previous-rolls").textContent = `-`;
 }
 
 /** rolls the type of die click/keydown */
@@ -207,9 +207,9 @@ function rollDie (dieType) {
 
 /** displays the relevent rolls in the HTML */
 function showRolls () {
-	document.getElementById("current-roll").textContent = roll.currentRoll;
-	document.getElementById("cumulative-roll").textContent = roll.cumulativeRoll;
-	document.getElementById("previous-rolls").textContent = roll.previousRolls;
+    document.getElementById("current-roll").textContent = roll.currentRoll;
+    document.getElementById("cumulative-roll").textContent = roll.cumulativeRoll;
+    document.getElementById("previous-rolls").textContent = roll.previousRolls;
 }
 
 
@@ -224,7 +224,7 @@ function hideModal () {
     let modal = document.getElementById("modal");
     modal.style.display = "none";
 
-	document.getElementById("modal-input").value = "";
+    document.getElementById("modal-input").value = "";
 }
 
 /** shows the modal-die-69 gif */
