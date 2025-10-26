@@ -345,7 +345,7 @@ tr.delete1 {
 tr.delete2 {
     color: var(--color-body-background);
     background: var(--color-body-background);
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 th {

@@ -287,7 +287,7 @@ function deleteSave (bin) {
     }, 1000);
     setTimeout(function () {
         document.getElementById("save-table").deleteRow(row.rowIndex);
-    }, 3000);
+    }, 2000);
 }
 
 /** renames the specified save slot */
